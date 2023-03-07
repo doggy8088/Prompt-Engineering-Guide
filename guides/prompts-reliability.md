@@ -31,7 +31,7 @@ Topics:
 
 ## 真實性
 
-LLMs have a tendency to generate responses that sounds coherent and convincing but can sometimes be made up. Improving prompts can help improve the model to generate more accurate/factual responses and reduce the likelihood to generate inconsistent and made up responses. 
+LLMs have a tendency to generate responses that sounds coherent and convincing but can sometimes be made up. Improving prompts can help improve the model to generate more accurate/factual responses and reduce the likelihood to generate inconsistent and made up responses.
 
 LLMs有時會產生聽起來連貫且令人信服但有時可能是虛構的回覆。改進提示可以幫助改善模型產生更準確/真實的回覆，並減少產生不一致和虛構回覆的可能性。
 
@@ -40,7 +40,7 @@ Some solutions might include:
 一些解決方案可能包括：
 
 - provide ground truth (e.g., related article paragraph or Wikipedia entry) as part of context to reduce the likelihood of the model producing made up text.
-- configure the model to produce less diverse responses by decreasing the probability parameters and instructing it to admit (e.g., "I don't know") when it doesn't know the answer. 
+- configure the model to produce less diverse responses by decreasing the probability parameters and instructing it to admit (e.g., "I don't know") when it doesn't know the answer.
 - provide in the prompt a combination of examples of questions and responses that it might know about and not know about
 
 
@@ -59,19 +59,19 @@ Let's look at a simple example:
 *提示：*
 
 ```
-Q: What is an atom? 
-A: An atom is a tiny particle that makes up everything. 
+Q: What is an atom?
+A: An atom is a tiny particle that makes up everything.
 
-Q: Who is Alvan Muntz? 
-A: ? 
+Q: Who is Alvan Muntz?
+A: ?
 
-Q: What is Kozar-09? 
-A: ? Q: 
+Q: What is Kozar-09?
+A: ? Q:
 
-How many moons does Mars have? 
-A: Two, Phobos and Deimos. 
+How many moons does Mars have?
+A: Two, Phobos and Deimos.
 
-Q: Who is Neto Beto Roberto? 
+Q: Who is Neto Beto Roberto?
 ```
 
 *Output:*
@@ -92,9 +92,9 @@ I made up the name "Neto Beto Roberto" so the model is correct in this instance.
 
 ## 偏見
 
-LLMs can produce problematic generations that can potentially be harmful and display biases that could deteriorate the performance of the model on downstream tasks. Some of these can be mitigates through effective prompting strategies but might require more advanced solutions like moderation and filtering. 
+LLMs can produce problematic generations that can potentially be harmful and display biases that could deteriorate the performance of the model on downstream tasks. Some of these can be mitigates through effective prompting strategies but might require more advanced solutions like moderation and filtering.
 
-LLMs 可能會產生有問題的生成物，這些生成物可能會有害，顯示偏見，可能會降低模型在下游任務中的效能。透過有效的提示策略可以緩解其中一些問題，但可能需要更高階的解決方案，如調節和過濾。
+LLMs 可能會產生有問題的生成物，這些生成物可能會有害，顯示偏見，可能會降低模型在下游任務中的效能。透過有效的提示策略可以緩解其中一些問題，但可能需要更進階的解決方案，如調節和過濾。
 
 ### Distribution of Exemplars
 
@@ -161,7 +161,7 @@ In the example above, it seems that the distribution of exemplars doesn't bias t
 
 ```
 Q: The food here is delicious!
-A: Positive 
+A: Positive
 
 Q: I'm so tired of this coursework.
 A: Negative
@@ -170,7 +170,7 @@ Q: I can't believe I failed the exam.
 A: Negative
 
 Q: I had a great day today!
-A: Positive 
+A: Positive
 
 Q: I hate this job.
 A: Negative
@@ -202,7 +202,7 @@ A:
 Negative
 ```
 
-While that last sentence is somewhat subjective, I flipped the distribution and instead used 8 positive examples and 2 negative examples and then tried the same exact sentence again. Guess what the model responded? It responded "Positive". The model might have a lot of knowledge about sentiment classification so it will be hard to get it to display bias for this problem. The advice here is to avoid skewing the distribution and instead provide more balanced number of examples for each label. For harder tasks where the model doesn't have too much knowledge of, it will likely struggle more. 
+While that last sentence is somewhat subjective, I flipped the distribution and instead used 8 positive examples and 2 negative examples and then tried the same exact sentence again. Guess what the model responded? It responded "Positive". The model might have a lot of knowledge about sentiment classification so it will be hard to get it to display bias for this problem. The advice here is to avoid skewing the distribution and instead provide more balanced number of examples for each label. For harder tasks where the model doesn't have too much knowledge of, it will likely struggle more.
 
 在某種程度上，上面那句話有點主觀性，我將分佈翻轉，使用了8個正面例子和2個負面例子，然後再次嘗試了完全相同的句子。猜猜模型的回應是什麼？它回答“積極”。模型可能對情感分類有很多瞭解，因此很難讓它對這個問題表現出偏見。建議避免偏斜分佈，而是為每個標籤提供更平衡的例子數量。對於模型沒有太多瞭解的更難的任務，它可能會更加困難。
 
@@ -228,7 +228,7 @@ Other upcoming topics:
 - Spurious Correlation
 - Domain Shift
 - Toxicity
-- Stereotypical bias 
+- Stereotypical bias
 - Gender bias
 - Coming soon!
 - Red Teaming

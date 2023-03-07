@@ -2,11 +2,11 @@
 
 # 基本提示
 
-In the previous guide, we introduced and gave a basic example of a prompt. 
+In the previous guide, we introduced and gave a basic example of a prompt.
 
 在先前的指南中，我們介紹並提供了一個提示的基本示範。
 
-In this guide, we will provide more examples of how prompts are used and introduce key concepts that will be important for the more advanced guides. 
+In this guide, we will provide more examples of how prompts are used and introduce key concepts that will be important for the more advanced guides.
 
 在本指南中，我們將提供更多提示用法的示範，並介紹對進一步的指南非常重要的關鍵概念。
 
@@ -101,7 +101,7 @@ Without paying too much attention to the accuracy of the output above, which is 
 
 ## 資訊提取
 
-While language models are trained to perform natural language generation and related tasks, it's also very capable of performing classification and a range of other natural language processing (NLP) tasks. 
+While language models are trained to perform natural language generation and related tasks, it's also very capable of performing classification and a range of other natural language processing (NLP) tasks.
 
 在語言模型被訓練用於自然語言產生及相關任務時，它同樣也能夠執行分類和一系列其他自然語言處理（NLP）任務。
 
@@ -127,7 +127,7 @@ Mention the large language model based product mentioned in the paragraph above:
 The large language model based product mentioned in the paragraph above is ChatGPT.
 ```
 
-There are many ways we can improve the results above, but this is already very useful. 
+There are many ways we can improve the results above, but this is already very useful.
 
 有很多方法可以改善上述的結果，但這已經非常有用了。
 
@@ -135,7 +135,7 @@ By now it should be obvious that you can ask the model to perform different task
 
 到目前為止，顯然您可以透過簡單地指示模型要做什麼來要求模型執行不同的任務。這是一種強大的能力，AI 產品建構者已經在使用它來建構強大的產品和體驗。
 
-Paragraph source: [ChatGPT: five priorities for research](https://www.nature.com/articles/d41586-023-00288-7) 
+Paragraph source: [ChatGPT: five priorities for research](https://www.nature.com/articles/d41586-023-00288-7)
 
 [ChatGPT：研究的五個優先事項](https://www.nature.com/articles/d41586-023-00288-7)
 
@@ -181,7 +181,7 @@ Context obtained from [Nature](https://www.nature.com/articles/d41586-023-00400-
 
 ## 文字分類
 
-So far, we have used simple instructions to perform a task. As a prompt engineer, you will need to get better at providing better instructions. But that's not all! You will also find that for harder use cases, just providing instructions won't be enough. This is where you need to think more about the context and the different elements you can use in a prompt. Other elements you can provide are `input data` or `examples`. 
+So far, we have used simple instructions to perform a task. As a prompt engineer, you will need to get better at providing better instructions. But that's not all! You will also find that for harder use cases, just providing instructions won't be enough. This is where you need to think more about the context and the different elements you can use in a prompt. Other elements you can provide are `input data` or `examples`.
 
 到目前為止，我們已經使用簡單的指令來執行任務。作為提示工程師，您需要提供更好的指令。但這還不夠！您還會發現，在更困難的用例中，僅提供指令是不夠的。這就是您需要更多地考慮上下文和提示中可以使用的不同元素的地方。您可以提供的其他元素包括`輸入資料`或`示範`。
 
@@ -194,9 +194,9 @@ Let's try to demonstrate this by providing an example of text classification.
 *提示:*
 
 ```
-Classify the text into neutral, negative or positive. 
+Classify the text into neutral, negative or positive.
 
-Text: I think the food was okay. 
+Text: I think the food was okay.
 Sentiment:
 ```
 
@@ -217,12 +217,12 @@ We gave the instruction to classify the text and the model responded with `'Neut
 *提示:*
 
 ```
-Classify the text into neutral, negative or positive. 
+Classify the text into neutral, negative or positive.
 
 Text: I think the vacation is okay.
-Sentiment: neutral 
+Sentiment: neutral
 
-Text: I think the food was okay. 
+Text: I think the food was okay.
 Sentiment:
 ```
 
@@ -243,7 +243,7 @@ Perfect! This time the model returned `neutral` which is the specific label I wa
 *提示:*
 
 ```
-Classify the text into nutral, negative or positive. 
+Classify the text into nutral, negative or positive.
 
 Text: I think the vacation is okay.
 Sentiment:
@@ -267,7 +267,7 @@ What is the problem here?
 
 ## 對話
 
-Perhaps one of the more interesting things you can achieve with prompt engineering is instructing the LLM system how to behave, its intent, and identity. This is particularly useful when you are building conversational systems like customer service chatbots. 
+Perhaps one of the more interesting things you can achieve with prompt engineering is instructing the LLM system how to behave, its intent, and identity. This is particularly useful when you are building conversational systems like customer service chatbots.
 
 也許，利用提示工程實現的更有趣的事情之一是指導LLM系統如何行動、其意圖和身份。在建構像客服聊天機器人這樣的對話系統時，這尤其有用。
 
@@ -296,7 +296,7 @@ AI:
 Sure! Black holes are regions of spacetime where the gravitational force is so strong that nothing, not even light, can escape from it. They are created when a very massive star dies and its core collapses in on itself, forming a singularity of infinite density. The intense gravity of the singularity pulls in all the matter and radiation around it, creating the black hole.
 ```
 
-Our AI research assistant sounds a bit too technical, right? Okay, let's change this behavior and instruct the system to give more accessible answers. 
+Our AI research assistant sounds a bit too technical, right? Okay, let's change this behavior and instruct the system to give more accessible answers.
 
 我們的人工智慧研究助手聽起來有點太技術化了，對吧？好的，讓我們改變這種行為，指示系統提供更易懂的答案。
 
@@ -310,7 +310,7 @@ The following is a conversation with an AI research assistant. The assistant ans
 Human: Hello, who are you?
 AI: Greeting! I am an AI research assistant. How can I help you today?
 Human: Can you tell me about the creation of black holes?
-AI: 
+AI:
 ```
 
 *Output:*
@@ -321,7 +321,7 @@ AI:
 Sure! Black holes are created when a very massive star runs out of fuel and collapses in on itself. The gravity of the star is so strong that nothing, not even light, can escape its pull. This creates a point in space-time with an intense gravitational force called a black hole.
 ```
 
-I think we made some progress. You can continue improving it. I am sure if you add more examples you might get even better results. 
+I think we made some progress. You can continue improving it. I am sure if you add more examples you might get even better results.
 
 我認為我們取得了一些進展。你可以繼續改進它。我相信如果你新增更多的例子，你可能會得到更好的結果。
 
@@ -335,7 +335,7 @@ One application where LLMs are quite effective at is code generation. Copilot is
 
 LLMs 在代碼生成方面非常有效，Copilot 是一個很好的例子。您可以透過巧妙的提示執行大量的代碼生成任務。讓我們看一下以下幾個示範。
 
-First, let's try a simple program that greets the user. 
+First, let's try a simple program that greets the user.
 
 首先，讓我們嘗試一個簡單的程式，向使用者問候。
 
@@ -358,7 +358,7 @@ let name = prompt("What is your name?");
 console.log(`Hello, ${name}!`);
 ```
 
-You can see that we didn't even need to specify language to use. 
+You can see that we didn't even need to specify language to use.
 
 你可以看到，我們甚至不需要指定語言就可以使用。
 
@@ -383,12 +383,12 @@ Create a MySQL query for all students in the Computer Science Department
 *輸出:*
 
 ```
-SELECT StudentId, StudentName 
-FROM students 
+SELECT StudentId, StudentName
+FROM students
 WHERE DepartmentId IN (SELECT DepartmentId FROM departments WHERE DepartmentName = 'Computer Science');
 ```
 
-This is very impressive. In this case we provided data about the database schema and asked it to generate a valid MySQL query. 
+This is very impressive. In this case we provided data about the database schema and asked it to generate a valid MySQL query.
 
 這非常令人印象深刻。在這種情況下，我們提供了有關數據庫架構的資料，並要求它產生一個有效的MySQL查詢。
 
@@ -398,13 +398,13 @@ This is very impressive. In this case we provided data about the database schema
 
 ## 推理
 
-Perhaps one of the most difficult tasks for an LLM today is one that requires some form of reasoning. Reasoning is one the areas that I am most excited about due to the types of complex applications that can emerge from LLMs. 
+Perhaps one of the most difficult tasks for an LLM today is one that requires some form of reasoning. Reasoning is one the areas that I am most excited about due to the types of complex applications that can emerge from LLMs.
 
 也許對於今天的LLM來說，最困難的任務之一是需要某種形式的推理。由於可以從LLM中產生各種複雜的應用程式，因此我對推理這一領域最感興奮。
 
 There have been some improvements on tasks involving mathematical capabilities. That said, it's important to note that current LLMs struggle to perform reasoning tasks so this requires even more advanced prompt engineering techniques. We will cover these advanced techniques in the next guide. For now, we will cover a few basic examples to show arithmetic capabilities.
 
-有關於涉及數學能力的任務有了一些改進。但是，需要注意的是，當前的語言模型仍然難以執行推理任務，因此這需要更先進的提示工程技術。我們將在下一篇指南中介紹這些高階技術。現在，我們將介紹一些基本的例子來展示算術能力。
+有關於涉及數學能力的任務有了一些改進。但是，需要注意的是，當前的語言模型仍然難以執行推理任務，因此這需要更先進的提示工程技術。我們將在下一篇指南中介紹這些進階技術。現在，我們將介紹一些基本的例子來展示算術能力。
 
 *Prompt:*
 
@@ -422,7 +422,7 @@ What is 9,000 * 9,000?
 81,000,000
 ```
 
-Let's try something more difficult. 
+Let's try something more difficult.
 
 讓我們試試更困難的東西。
 
@@ -431,9 +431,9 @@ Let's try something more difficult.
 *提示:*
 
 ```
-The odd numbers in this group add up to an even number: 15, 32, 5, 13, 82, 7, 1. 
+The odd numbers in this group add up to an even number: 15, 32, 5, 13, 82, 7, 1.
 
-A: 
+A:
 ```
 
 *Output*
@@ -453,9 +453,9 @@ That's incorrect! Let's try to improve this by improving the prompt.
 *提示:*
 
 ```
-The odd numbers in this group add up to an even number: 15, 32, 5, 13, 82, 7, 1. 
+The odd numbers in this group add up to an even number: 15, 32, 5, 13, 82, 7, 1.
 
-Solve by breaking the problem into steps. First, identify the odd numbers, add them, and indicate whether the result is odd or even. 
+Solve by breaking the problem into steps. First, identify the odd numbers, add them, and indicate whether the result is odd or even.
 ```
 
 *Output:*
@@ -464,7 +464,7 @@ Solve by breaking the problem into steps. First, identify the odd numbers, add t
 
 ```
 Odd numbers: 15, 5, 13, 7, 1
-Sum: 41 
+Sum: 41
 41 is an odd number.
 ```
 
@@ -478,7 +478,7 @@ We will continue to include more examples of common applications in this section
 
 In the upcoming guides, we will cover even more advanced prompt engineering concepts for improving performance on all these and more difficult tasks.
 
-在即將推出的指南中，我們將涵蓋更高階的提示工程概念，以改善在所有這些和更困難的任務上的表現。
+在即將推出的指南中，我們將涵蓋更進階的提示工程概念，以改善在所有這些和更困難的任務上的表現。
 
 ---
 
@@ -488,5 +488,5 @@ In the upcoming guides, we will cover even more advanced prompt engineering conc
 
 [Next Section (Advanced Prompting Techniques)](./prompts-advanced-usage.md)
 
-[下一節（高階提示技巧）](./prompts-advanced-usage.md)
+[下一節（進階提示技巧）](./prompts-advanced-usage.md)
 

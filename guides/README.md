@@ -19,7 +19,7 @@ The following are a set of guides on prompt engineering developed by us (DAIR.AI
 
 - [提示工程 - 簡介](/guides/prompts-intro.md)
 - [提示工程 - 基礎提示](/guides/prompts-basic-usage.md)
-- [提示工程 - 高階提示](/guides/prompts-advanced-usage.md)
+- [提示工程 - 進階提示](/guides/prompts-advanced-usage.md)
 - [提示工程 - 應用](/guides/prompts-applications.md)
 - [提示工程 - ChatGPT](/guides/prompts-chatgpt.md)
 - [提示工程 - 對抗提示](/guides/prompts-adversarial.md)

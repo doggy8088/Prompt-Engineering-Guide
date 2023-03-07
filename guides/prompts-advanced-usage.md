@@ -1,14 +1,14 @@
 # Advanced Prompting
 
-# 高階提示
+# 進階提示
 
-By this point, it should be obvious that it helps to improve prompts to get better results on different tasks. That's the whole idea behind prompt engineering. 
+By this point, it should be obvious that it helps to improve prompts to get better results on different tasks. That's the whole idea behind prompt engineering.
 
 到這個時候，應該很明顯了，改進提示有助於在不同的任務中獲得更好的結果。這就是提示工程背後的整個思想。
 
-While those examples were fun, let's cover a few concepts more formally before we jump into more advanced concepts. 
+While those examples were fun, let's cover a few concepts more formally before we jump into more advanced concepts.
 
-那些例子很有趣，但在我們深入更高階的概念之前，讓我們更正式地介紹一些概念。
+那些例子很有趣，但在我們深入更進階的概念之前，讓我們更正式地介紹一些概念。
 
 Topics:
 
@@ -48,7 +48,7 @@ LLMs today trained on large amounts of data and tuned to follow instructions, ar
 *提示:*
 
 ```
-Classify the text into neutral, negative or positive. 
+Classify the text into neutral, negative or positive.
 
 Text: I think the vacation is okay.
 Sentiment:
@@ -72,7 +72,7 @@ Note that in the prompt above we didn't provide the model any examples -- that's
 
 ## 少量激勵
 
-While large-language models already demonstrate remarkable zero-shot capabilities, they still fall short on more complex tasks when using the zero-shot setting. To improve on this, few-shot prompting is used as a technique to enable in-context learning where we provide demonstrations in the prompt to steer the model to better performance. The demonstrations serve as conditioning for subsequent examples where we would like the model to generate a response. 
+While large-language models already demonstrate remarkable zero-shot capabilities, they still fall short on more complex tasks when using the zero-shot setting. To improve on this, few-shot prompting is used as a technique to enable in-context learning where we provide demonstrations in the prompt to steer the model to better performance. The demonstrations serve as conditioning for subsequent examples where we would like the model to generate a response.
 
 雖然大型語言模型已經展現出卓越的零-shot能力，但在使用零-shot設定時，它們仍然在更複雜的任務上表現不佳。為了改善這一點，少量提示被用作一種技術，以啟用上下文學習，其中我們在提示中提供示範，以引導模型實現更好的效能。這些示範作為後續示範的條件，我們希望模型產生回應。
 
@@ -100,7 +100,7 @@ the word farduddle is:
 When we won the game, we all started to farduddle in celebration.
 ```
 
-We can clearly observe that the model has somehow learned how to perform the task by providing it just one example (i.e., 1-shot). For more difficult tasks, we can experiment with increasing the demonstrations (e.g., 3-shot, 5-shot, 10-shot, etc.). 
+We can clearly observe that the model has somehow learned how to perform the task by providing it just one example (i.e., 1-shot). For more difficult tasks, we can experiment with increasing the demonstrations (e.g., 3-shot, 5-shot, 10-shot, etc.).
 
 我們可以清楚地觀察到，該模型已經學會了如何執行任務，只需要提供一個例子（即1-shot）。對於更困難的任務，我們可以嘗試增加示範（例如3-shot、5-shot、10-shot等）。
 
@@ -109,7 +109,7 @@ Following the findings from [Min et al. (2022)](https://arxiv.org/abs/2202.12837
 根據 [Min 等人 (2022)](https://arxiv.org/abs/2202.12837) 的研究結果，以下是在進行少樣本學習時有關示範/示範的一些提示：
 
 - "the label space and the distribution of the input text specified by the demonstrations are both key (regardless of whether the labels are correct for individual inputs)"
-- the format you use also plays a key role in performance, even if you just use random labels, this is much better than no labels at all.  
+- the format you use also plays a key role in performance, even if you just use random labels, this is much better than no labels at all.
 - additional results show that selecting random labels from a true distribution of labels (instead of a uniform distribution) also helps.
 
 
@@ -151,7 +151,7 @@ We still get the correct answer, even though the labels have been randomized. No
 *提示:*
 
 ```
-Positive This is awesome! 
+Positive This is awesome!
 This is bad! Negative
 Wow that movie was rad!
 Positive
@@ -179,9 +179,9 @@ Standard few-shot prompting works well for many tasks but is still not a perfect
 標準的少量激勵技術在許多任務中表現良好，但在處理更複雜的推理任務時仍不是完美的技術。讓我們來示範一下為什麼會這樣。您還記得我們之前提供的以下任務嗎？
 
 ```
-The odd numbers in this group add up to an even number: 15, 32, 5, 13, 82, 7, 1. 
+The odd numbers in this group add up to an even number: 15, 32, 5, 13, 82, 7, 1.
 
-A: 
+A:
 ```
 
 If we try this again, the model outputs the following:
@@ -192,7 +192,7 @@ If we try this again, the model outputs the following:
 Yes, the odd numbers in this group add up to 107, which is an even number.
 ```
 
-This is not the correct response, which not only highlights the limitations of these systems but that there is a need for more advanced prompt engineering. 
+This is not the correct response, which not only highlights the limitations of these systems but that there is a need for more advanced prompt engineering.
 
 這不是正確的回應，這不僅凸顯了這些系統的限制，也需要更先進的提示工程。
 
@@ -217,8 +217,8 @@ A: The answer is True.
 The odd numbers in this group add up to an even number: 17,  9, 10, 12, 13, 4, 2.
 A: The answer is False.
 
-The odd numbers in this group add up to an even number: 15, 32, 5, 13, 82, 7, 1. 
-A: 
+The odd numbers in this group add up to an even number: 15, 32, 5, 13, 82, 7, 1.
+A:
 ```
 
 *Output:*
@@ -233,9 +233,9 @@ That didn't work. It seems like few-shot prompting is not enough to get reliable
 
 那沒用。似乎少量提示不足以獲得這種型別的推理問題的可靠響應。上面的示範提供了任務的基本資訊。如果你仔細觀察，我們介紹的任務型別涉及更多的推理步驟。換句話說，如果我們將問題分解成步驟並向模型示範，可能會有所幫助。最近，[思維鏈 (CoT)提示](https://arxiv.org/abs/2201.11903)已經被推廣用於解決更複雜的算術、常識和符號推理任務。
 
-Overall, it seems that providing examples is useful for solving some tasks. When zero-shot prompting and few-shot prompting are not sufficient, it might mean that the whatever was learned by the model isn't enough to do well at the task. From here it is recommended to start thinking about fine-tuning your own models or experimenting with more advanced prompting techniques. Up next we talk about one of the popular prompting techniques called chain-of-thought prompting which has gained a lot of popularity. 
+Overall, it seems that providing examples is useful for solving some tasks. When zero-shot prompting and few-shot prompting are not sufficient, it might mean that the whatever was learned by the model isn't enough to do well at the task. From here it is recommended to start thinking about fine-tuning your own models or experimenting with more advanced prompting techniques. Up next we talk about one of the popular prompting techniques called chain-of-thought prompting which has gained a lot of popularity.
 
-整體而言，提供範例對於解決某些任務似乎是有用的。當零-shot提示和少量提示不足時，這可能意味著模型所學習的內容不足以在該任務上表現良好。從這裡開始，建議開始考慮微調自己的模型或嘗試更高階的提示技術。接下來，我們將談論一種名為“鏈式思維提示”的流行提示技術。
+整體而言，提供範例對於解決某些任務似乎是有用的。當零-shot提示和少量提示不足時，這可能意味著模型所學習的內容不足以在該任務上表現良好。從這裡開始，建議開始考慮微調自己的模型或嘗試更進階的提示技術。接下來，我們將談論一種名為“鏈式思維提示”的流行提示技術。
 
 ---
 
@@ -264,7 +264,7 @@ A: Adding all the odd numbers (11, 13) gives 24. The answer is True.
 The odd numbers in this group add up to an even number: 17,  9, 10, 12, 13, 4, 2.
 A: Adding all the odd numbers (17, 9, 13) gives 39. The answer is False.
 
-The odd numbers in this group add up to an even number: 15, 32, 5, 13, 82, 7, 1. 
+The odd numbers in this group add up to an even number: 15, 32, 5, 13, 82, 7, 1.
 A:
 ```
 
@@ -288,7 +288,7 @@ Wow! We can see a perfect result when we provided the reasoning step. In fact, w
 The odd numbers in this group add up to an even number: 4, 8, 9, 15, 12, 2, 1.
 A: Adding all the odd numbers (9, 15, 1) gives 25. The answer is False.
 
-The odd numbers in this group add up to an even number: 15, 32, 5, 13, 82, 7, 1. 
+The odd numbers in this group add up to an even number: 15, 32, 5, 13, 82, 7, 1.
 A:
 ```
 
@@ -300,7 +300,7 @@ A:
 Adding all the odd numbers (15, 5, 13, 7, 1) gives 41. The answer is False.
 ```
 
-Keep in mind that the authors claim that this is an emergent ability that arises with sufficiently large language models. 
+Keep in mind that the authors claim that this is an emergent ability that arises with sufficiently large language models.
 
 請記住，作者聲稱這是一種隨著足夠大的語言模型而出現的新能力。
 
@@ -330,7 +330,7 @@ I went to the market and bought 10 apples. I gave 2 apples to the neighbor and 2
 11 apples
 ```
 
-The answer is incorrect! Now Let's try with the special prompt. 
+The answer is incorrect! Now Let's try with the special prompt.
 
 這個答案是不正確的！現在讓我們試著使用特殊提示。
 
@@ -367,7 +367,7 @@ It's actually impressive that this simple prompt is effective at this task. This
 
 Perhaps one of the more advanced techniques out there for prompt engineering is self-consistency. Proposed by [Wang et al. (2022)](https://arxiv.org/pdf/2203.11171.pdf), self-consistency aims "to replace the naive greedy decoding used in chain-of-thought prompting". The idea is to sample multiple, diverse reasoning paths through few-shot CoT, and use the generations to select the most consistent answer. This helps to boost the performance of CoT prompting on tasks involving arithmetic and commonsense reasoning.
 
-也許，對於快速工程而言，更高階的技術之一是自洽性。由 [Wang et al. (2022)](https://arxiv.org/pdf/2203.11171.pdf) 提出，自洽性旨在“取代鏈式思維提示中使用的天真貪婪解碼”。其想法是透過少量樣本的鏈式思維提示抽樣多種多樣的推理路徑，並使用產生的結果選擇最一致的答案。這有助於提高鏈式思維提示在涉及算術和常識推理的任務中的效能。
+也許，對於快速工程而言，更進階的技術之一是自洽性。由 [Wang et al. (2022)](https://arxiv.org/pdf/2203.11171.pdf) 提出，自洽性旨在“取代鏈式思維提示中使用的天真貪婪解碼”。其想法是透過少量樣本的鏈式思維提示抽樣多種多樣的推理路徑，並使用產生的結果選擇最一致的答案。這有助於提高鏈式思維提示在涉及算術和常識推理的任務中的效能。
 
 Let's try the following example for arithmetic reasoning:
 
@@ -463,7 +463,7 @@ When the narrator was 6, his sister was half his age, which is 3. Now that the n
 When I was 6 my sister was half my age, so she was 3. Now I am 70, so she is 70/2 = 35. The answer is 35.
 ```
 
-Computing for the final answer involves a few steps (check out the paper for the details) but for the sake of simplicity, we can clearly see that there is already a majority answer emerging so that would essentially become the final answer. 
+Computing for the final answer involves a few steps (check out the paper for the details) but for the sake of simplicity, we can clearly see that there is already a majority answer emerging so that would essentially become the final answer.
 
 計算最終答案需要幾個步驟（詳細資訊請檢視論文），但為了簡單起見，我們可以清楚地看到已經出現了大多數答案，因此那將成為最終答案。
 
@@ -473,7 +473,7 @@ Computing for the final answer involves a few steps (check out the paper for the
 
 ## 產生知識提示
 
-LLMs continue to be improved and one popular technique include the ability to incorporate knowledge or information to help the model make more accurate predictions. 
+LLMs continue to be improved and one popular technique include the ability to incorporate knowledge or information to help the model make more accurate predictions.
 
 LLMs持續改進，其中一種流行的技術包括能夠整合知識或資訊，以幫助模型做出更精確的預測。
 
@@ -566,7 +566,7 @@ Question: Part of golf is trying to get a higher point total than others. Yes or
 
 Knowledge: The objective of golf is to play a set of holes in the least number of strokes. A round of golf typically consists of 18 holes. Each hole is played once in the round on a standard golf course. Each stroke is counted as one point, and the total number of strokes is used to determine the winner of the game.
 
-Explain and Answer: 
+Explain and Answer:
 ```
 
 *Answer 1 (confidence very high):*
@@ -607,11 +607,11 @@ Some really interesting things happened with this example. In the first answer, 
 
 ![](../img/APE.png)
 
-[Zhou et al., (2022)](https://arxiv.org/abs/2211.01910) propose automatic prompt engineer (APE) a framework for automatic instruction generation and selection. The instruction generation problem is framed as natural language synthesis addressed as a black-box optimization problem using LLMs to generate and search over candidate solutions. 
+[Zhou et al., (2022)](https://arxiv.org/abs/2211.01910) propose automatic prompt engineer (APE) a framework for automatic instruction generation and selection. The instruction generation problem is framed as natural language synthesis addressed as a black-box optimization problem using LLMs to generate and search over candidate solutions.
 
 [Zhou等人，(2022)](https://arxiv.org/abs/2211.01910)提出了自動提示工程師(APE)，這是一個用於自動產生和選擇指令的框架。該指令產生問題被建構為自然語言合成問題，使用LLMs將其作為黑盒優化問題來解決，以產生和搜尋候選解決方案。
 
-The first step involves a large language model (as inference model) that is given output demonstrations to generate instruction candidates for a task. These candidate solution will guide the search procedure. The instructions are executed using a target model, and then the most appropriate instruction is selected based on computed evaluation scores. 
+The first step involves a large language model (as inference model) that is given output demonstrations to generate instruction candidates for a task. These candidate solution will guide the search procedure. The instructions are executed using a target model, and then the most appropriate instruction is selected based on computed evaluation scores.
 
 第一步涉及使用大型語言模型（作為推理模型），該模型接收輸出示範以產生任務的指令候選項。這些候選解決方案將指導搜尋過程。指令使用目標模型執行，然後根據計算的評估分數選擇最合適的指令。
 
@@ -632,7 +632,7 @@ This paper touches on an important topic related to prompt engineering which is 
 本文涉及與快速工程相關的重要主題，即自動優化提示的想法。雖然本指南沒有深入探討這個話題，但如果您對此感興趣，以下是幾篇關鍵論文：
 
 - [AutoPrompt](https://arxiv.org/abs/2010.15980) - proposes an approach to automatically create prompts for a diverse set of tasks based on gradient-guided search.
-- [Prefix Tuning](https://arxiv.org/abs/2101.00190) - a lightweight alternative to fine-tuning that prepends a trainable continuous prefix for NLG tasks. 
+- [Prefix Tuning](https://arxiv.org/abs/2101.00190) - a lightweight alternative to fine-tuning that prepends a trainable continuous prefix for NLG tasks.
 - [Prompt Tuning](https://arxiv.org/abs/2104.08691) - proposes a mechanism for learning soft prompts through back propagation.
 
 

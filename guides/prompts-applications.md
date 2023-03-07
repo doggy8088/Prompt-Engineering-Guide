@@ -2,9 +2,9 @@
 
 # 提示應用程式
 
-In this guide we will cover some advanced and interesting ways we can use prompt engineering to perform useful and more advanced tasks. 
+In this guide we will cover some advanced and interesting ways we can use prompt engineering to perform useful and more advanced tasks.
 
-在本指南中，我們將介紹一些高階和有趣的方式，使用提示工程來執行有用且更高階的任務。
+在本指南中，我們將介紹一些進階和有趣的方式，使用提示工程來執行有用且更進階的任務。
 
 **Note that this section is under heavy development.**
 Topics:
@@ -98,11 +98,11 @@ This is very useful. We actually use this example for a different test in anothe
 
 ![](../img/pal.png)
 
-Let's look at an example using LangChain and OpenAI GPT-3. We are interested to develop a simple application that's able to interpret the question being asked and provide an answer by leveraging the Python interpreter. 
+Let's look at an example using LangChain and OpenAI GPT-3. We are interested to develop a simple application that's able to interpret the question being asked and provide an answer by leveraging the Python interpreter.
 
 讓我們來看一個使用 LangChain 和 OpenAI GPT-3 的例子。我們有興趣開發一個簡單的應用程式，能夠透過利用 Python 解譯器來解釋所問的問題並提供答案。
 
-Specifically, we are interested to create a functionality that allows the use of the LLM to answer questions that require date understanding. We will provide the LLM a prompt that includes a few exemplars which are adopted from [here](https://github.com/reasoning-machines/pal/blob/main/pal/prompt/date_understanding_prompt.py).  
+Specifically, we are interested to create a functionality that allows the use of the LLM to answer questions that require date understanding. We will provide the LLM a prompt that includes a few exemplars which are adopted from [here](https://github.com/reasoning-machines/pal/blob/main/pal/prompt/date_understanding_prompt.py).
 
 具體來說，我們有興趣建立一個功能，使得LLM能夠回答需要日期理解的問題。我們將為LLM提供一個提示，其中包括從[這裡](https://github.com/reasoning-machines/pal/blob/main/pal/prompt/date_understanding_prompt.py)採用的幾個實例。
 
