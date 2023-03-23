@@ -333,7 +333,7 @@ The current recommendation for `gpt-3.5-turbo-0301` is to add instructions in th
 - [ChatGPT等產生AI模型在SPC實踐，教育和研究中如何（誤）用？一項探索性研究](https://arxiv.org/abs/2302.10916) (2023年2月)
 - [ChatGPT和Fine-tuned BERT的比較研究](https://arxiv.org/abs/2302.10198) (2023年2月)
 - [一個提示模式目錄，以增強使用ChatGPT的提示工程](https://arxiv.org/abs/2302.11382) (2023年2月)
-- [透過與ChatGPT聊天實現zero-shot信息提取](https://arxiv.org/abs/2302.10205) (2023年2月)
+- [透過與ChatGPT聊天實現zero-shot資訊擷取](https://arxiv.org/abs/2302.10205) (2023年2月)
 - [ChatGPT：萬能但不精通](https://arxiv.org/abs/2302.10724) (2023年2月)
 - [ChatGPT和DALL-E 2在決策和空間推理方面的初步評估](https://arxiv.org/abs/2302.09068) (2023年2月)
 - [網民，學者和資訊專業人員對AI的看法，特別是ChatGPT](https://arxiv.org/abs/2302.07136) (2023年2月)

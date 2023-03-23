@@ -26,11 +26,11 @@ Topics:
 ---
 
 - [文字摘要](#text-summarization)
-- [信息提取](#information-extraction)
+- [資訊擷取](#information-extraction)
 - [問答系統](#question-answering)
 - [文字分類](#text-classification)
 - [對話系統](#conversation)
-- [代碼生成](#code-generation)
+- [程式碼生成](#code-generation)
 - [推理](#reasoning)
 
 ---
@@ -206,7 +206,7 @@ Neutral
 
 We gave the instruction to classify the text and the model responded with `'Neutral'` which is correct. Nothing is wrong with this but let's say that what we really need is for the model to give the label in the exact format we want. So instead of `Neutral` we want it to return `neutral`. How do we achieve this? There are different ways to do this. We care about specificity here, so the more information we can provide the prompt the better results. We can try providing examples to specify the correct behavior. Let's try again:
 
-我們已經指示將文字進行分類，模型回應為“中性”，這是正確的。這沒有問題，但假設我們真正需要的是模型以我們想要的精確格式給出標籤。因此，我們希望它返回“neutral”而不是“Neutral”。我們可以用不同的方法來實現這一點。在這裡，我們關心的是具體性，因此我們提供的提示信息越多，結果就越好。我們可以嘗試提供示範來指定正確的行為。讓我們再試一次：
+我們已經指示將文字進行分類，模型回應為“中性”，這是正確的。這沒有問題，但假設我們真正需要的是模型以我們想要的精確格式給出標籤。因此，我們希望它返回“neutral”而不是“Neutral”。我們可以用不同的方法來實現這一點。在這裡，我們關心的是具體性，因此我們提供的提示資訊越多，結果就越好。我們可以嘗試提供示範來指定正確的行為。讓我們再試一次：
 
 *Prompt:*
 
@@ -325,11 +325,11 @@ I think we made some progress. You can continue improving it. I am sure if you a
 
 ## Code Generation
 
-## 程式碼產生
+## 程式碼生成
 
 One application where LLMs are quite effective is code generation. Copilot is a great example of this. There are a vast number of code-generation tasks you can perform with clever prompts. Let's look at a few examples below.
 
-LLMs 非常有效的一個應用是程式碼產生。Copilot 是一個很好的例子。你可以透過巧妙的提示執行大量的程式碼產生任務。讓我們看下面的幾個例子。
+LLMs 非常有效的一個應用是程式碼生成。Copilot 是一個很好的例子。你可以透過巧妙的提示執行大量的程式碼生成任務。讓我們看下面的幾個例子。
 
 First, let's try a simple program that greets the user.
 

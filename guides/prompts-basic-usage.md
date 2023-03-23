@@ -31,11 +31,11 @@ Topics:
 ---
 
 - [文字摘要](#text-summarization)
-- [信息提取](#information-extraction)
+- [資訊擷取](#information-extraction)
 - [問答系統](#question-answering)
 - [文字分類](#text-classification)
 - [對話系統](#conversation)
-- [代碼生成](#code-generation)
+- [程式碼生成](#code-generation)
 - [推理](#reasoning)
 - [Python筆記本](#python-notebooks)
 
@@ -331,11 +331,11 @@ I think we made some progress. You can continue improving it. I am sure if you a
 
 ## Code Generation
 
-## 程式碼產生
+## 程式碼生成
 
 One application where LLMs are quite effective is code generation. Copilot is a great example of this. There are a vast number of code-generation tasks you can perform with clever prompts. Let's look at a few examples below.
 
-LLMs 非常有效的一個應用是程式碼產生。Copilot 是一個很好的例子。你可以透過巧妙的提示執行大量的程式碼產生任務。讓我們看一下下面的幾個例子。
+LLMs 非常有效的一個應用是程式碼生成。Copilot 是一個很好的例子。你可以透過巧妙的提示執行大量的程式碼生成任務。讓我們看一下下面的幾個例子。
 
 First, let's try a simple program that greets the user.
 
