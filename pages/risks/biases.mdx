@@ -2,9 +2,9 @@
 
 # 偏見
 
-LLMs can produce problematic generations that can potentially be harmful and display biases that could deteriorate the performance of the model on downstream tasks. Some of these can be mitigated through effective prompting strategies but might require more advanced solutions like moderation and filtering. 
+LLMs can produce problematic generations that can potentially be harmful and display biases that could deteriorate the performance of the model on downstream tasks. Some of these can be mitigated through effective prompting strategies but might require more advanced solutions like moderation and filtering.
 
-LLMs 可能會產生有問題的產生結果，這些結果可能會有害，並且可能會顯示出偏見，這可能會降低模型在下游任務中的效能。其中一些問題可以透過有效的提示策略來緩解，但可能需要更高階的解決方案，如調節和過濾。
+LLMs 可能會產生有問題的產生結果，這些結果可能會有害，並且可能會顯示出偏見，這可能會降低模型在下游任務中的效能。其中一些問題可以透過有效的提示策略來緩解，但可能需要更進階的解決方案，如調節和過濾。
 
 ### Distribution of Exemplars
 
@@ -71,7 +71,7 @@ In the example above, it seems that the distribution of exemplars doesn't bias t
 
 ```
 Q: The food here is delicious!
-A: Positive 
+A: Positive
 
 Q: I'm so tired of this coursework.
 A: Negative
@@ -80,7 +80,7 @@ Q: I can't believe I failed the exam.
 A: Negative
 
 Q: I had a great day today!
-A: Positive 
+A: Positive
 
 Q: I hate this job.
 A: Negative
@@ -112,7 +112,7 @@ A:
 Negative
 ```
 
-While that last sentence is somewhat subjective, I flipped the distribution and instead used 8 positive examples and 2 negative examples and then tried the same exact sentence again. Guess what the model responded? It responded "Positive". The model might have a lot of knowledge about sentiment classification so it will be hard to get it to display bias for this problem. The advice here is to avoid skewing the distribution and instead provide a more balanced number of examples for each label. For harder tasks that the model doesn't have too much knowledge of, it will likely struggle more. 
+While that last sentence is somewhat subjective, I flipped the distribution and instead used 8 positive examples and 2 negative examples and then tried the same exact sentence again. Guess what the model responded? It responded "Positive". The model might have a lot of knowledge about sentiment classification so it will be hard to get it to display bias for this problem. The advice here is to avoid skewing the distribution and instead provide a more balanced number of examples for each label. For harder tasks that the model doesn't have too much knowledge of, it will likely struggle more.
 
 那最後一句話有點主觀，我翻轉了分佈，使用了8個正面例子和2個負面例子，然後再次嘗試了完全相同的句子。你猜模型的回應是什麼？它回答“積極”。模型可能對情感分類有很多知識，因此很難讓它顯示出這個問題的偏見。建議避免偏斜分佈，而是為每個標籤提供更平衡的例子數量。對於模型沒有太多知識的更難的任務，它可能會更加困難。
 

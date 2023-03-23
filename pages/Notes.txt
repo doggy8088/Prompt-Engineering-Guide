@@ -1,0 +1,42 @@
+mdt G:\Projects\Prompt-Engineering-Guide\pages\about.mdx -i -p
+mdt G:\Projects\Prompt-Engineering-Guide\pages\applications.mdx -i -p
+mdt G:\Projects\Prompt-Engineering-Guide\pages\datasets.mdx -i -p
+mdt G:\Projects\Prompt-Engineering-Guide\pages\index.mdx -i -p
+mdt G:\Projects\Prompt-Engineering-Guide\pages\introduction.mdx -i -p
+mdt G:\Projects\Prompt-Engineering-Guide\pages\models.mdx -i -p
+mdt G:\Projects\Prompt-Engineering-Guide\pages\notebooks.mdx -i -p
+
+# 有太長的 List 無法翻譯
+mdt G:\Projects\Prompt-Engineering-Guide\pages\papers.mdx -i -p
+
+mdt G:\Projects\Prompt-Engineering-Guide\pages\readings.mdx -i -p
+mdt G:\Projects\Prompt-Engineering-Guide\pages\risks.mdx -i -p
+mdt G:\Projects\Prompt-Engineering-Guide\pages\techniques.mdx -i -p
+mdt G:\Projects\Prompt-Engineering-Guide\pages\tools.mdx -i -p
+mdt G:\Projects\Prompt-Engineering-Guide\pages\applications\generating.mdx -i -p
+mdt G:\Projects\Prompt-Engineering-Guide\pages\applications\pal.mdx -i -p
+mdt G:\Projects\Prompt-Engineering-Guide\pages\introduction\basics.mdx -i -p
+mdt G:\Projects\Prompt-Engineering-Guide\pages\introduction\elements.mdx -i -p
+mdt G:\Projects\Prompt-Engineering-Guide\pages\introduction\settings.mdx -i -p
+mdt G:\Projects\Prompt-Engineering-Guide\pages\introduction\tips.mdx -i -p
+mdt G:\Projects\Prompt-Engineering-Guide\pages\models\chatgpt.mdx -i -p
+mdt G:\Projects\Prompt-Engineering-Guide\pages\models\flan.mdx -i -p
+mdt G:\Projects\Prompt-Engineering-Guide\pages\models\gpt-4.mdx -i -p
+mdt G:\Projects\Prompt-Engineering-Guide\pages\introduction\examples.mdx -i -p
+mdt G:\Projects\Prompt-Engineering-Guide\pages\risks\adversarial.mdx -i -p
+mdt G:\Projects\Prompt-Engineering-Guide\pages\risks\biases.mdx -i -p
+mdt G:\Projects\Prompt-Engineering-Guide\pages\risks\factuality.mdx -i -p
+mdt G:\Projects\Prompt-Engineering-Guide\pages\techniques\activeprompt.mdx -i -p    示範
+mdt G:\Projects\Prompt-Engineering-Guide\pages\techniques\ape.mdx -i -p
+mdt G:\Projects\Prompt-Engineering-Guide\pages\techniques\consistency.mdx -i -p
+mdt G:\Projects\Prompt-Engineering-Guide\pages\techniques\cot.mdx -i -p             (請保留原文)
+mdt G:\Projects\Prompt-Engineering-Guide\pages\techniques\dsp.mdx -i -p
+mdt G:\Projects\Prompt-Engineering-Guide\pages\techniques\fewshot.mdx -i -p
+mdt G:\Projects\Prompt-Engineering-Guide\pages\techniques\graph.mdx -i -p
+mdt G:\Projects\Prompt-Engineering-Guide\pages\techniques\knowledge.mdx -i -p               (請保留原文)
+mdt G:\Projects\Prompt-Engineering-Guide\pages\techniques\multimodalcot.mdx -i -p
+mdt G:\Projects\Prompt-Engineering-Guide\pages\techniques\react.mdx -i -p
+mdt G:\Projects\Prompt-Engineering-Guide\pages\techniques\zeroshot.mdx -i -p
+
+
+

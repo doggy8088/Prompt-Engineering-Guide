@@ -4,7 +4,7 @@
 
 While large-language models demonstrate remarkable zero-shot capabilities, they still fall short on more complex tasks when using the zero-shot setting. Few-shot prompting can be used as a technique to enable in-context learning where we provide demonstrations in the prompt to steer the model to better performance. The demonstrations serve as conditioning for subsequent examples where we would like the model to generate a response.
 
-雖然大型語言模型展現了非凡的零-shot能力，但在使用零-shot設定時，它們仍然在更複雜的任務上表現不佳。少量提示可以用作一種技術，以實現上下文學習，其中我們在提示中提供示範以引導模型實現更好的效能。這些示範作為後續示範的條件，我們希望模型產生回應。
+雖然大型語言模型展現了非凡的zero-shot能力，但在使用zero-shot設定時，它們仍然在更複雜的任務上表現不佳。少量提示可以用作一種技術，以實現上下文學習，其中我們在提示中提供示範以引導模型實現更好的效能。這些示範作為後續示範的條件，我們希望模型產生回應。
 
 Let's demonstrate few-shot prompting via an example that was presented in [Brown et al. 2020](https://arxiv.org/abs/2005.14165). In the example, the task is to correctly use a new word in a sentence.
 
@@ -39,7 +39,7 @@ Following the findings from [Min et al. (2022)](https://arxiv.org/abs/2202.12837
 根據[Min等人（2022）](https://arxiv.org/abs/2202.12837)的研究結果，以下是在進行少樣本學習時關於示範/示範的一些額外提示：
 
 - "the label space and the distribution of the input text specified by the demonstrations are both important (regardless of whether the labels are correct for individual inputs)"
-- the format you use also plays a key role in performance, even if you just use random labels, this is much better than no labels at all.  
+- the format you use also plays a key role in performance, even if you just use random labels, this is much better than no labels at all.
 - additional results show that selecting random labels from a true distribution of labels (instead of a uniform distribution) also helps.
 
 
@@ -81,7 +81,7 @@ We still get the correct answer, even though the labels have been randomized. No
 *提示:*
 
 ```
-Positive This is awesome! 
+Positive This is awesome!
 This is bad! Negative
 Wow that movie was rad!
 Positive
@@ -109,9 +109,9 @@ Standard few-shot prompting works well for many tasks but is still not a perfect
 標準的少量樣本提示對許多任務都有效，但在處理更複雜的推理任務時仍不是一種完美的技術。讓我們示範一下為什麼會這樣。您還記得我們之前提供的以下任務的例子嗎：
 
 ```
-The odd numbers in this group add up to an even number: 15, 32, 5, 13, 82, 7, 1. 
+The odd numbers in this group add up to an even number: 15, 32, 5, 13, 82, 7, 1.
 
-A: 
+A:
 ```
 
 If we try this again, the model outputs the following:
@@ -122,7 +122,7 @@ If we try this again, the model outputs the following:
 Yes, the odd numbers in this group add up to 107, which is an even number.
 ```
 
-This is not the correct response, which not only highlights the limitations of these systems but that there is a need for more advanced prompt engineering. 
+This is not the correct response, which not only highlights the limitations of these systems but that there is a need for more advanced prompt engineering.
 
 這不是正確的回應，不僅凸顯了這些系統的限制，也需要更先進的提示工程。
 
@@ -147,8 +147,8 @@ A: The answer is True.
 The odd numbers in this group add up to an even number: 17,  9, 10, 12, 13, 4, 2.
 A: The answer is False.
 
-The odd numbers in this group add up to an even number: 15, 32, 5, 13, 82, 7, 1. 
-A: 
+The odd numbers in this group add up to an even number: 15, 32, 5, 13, 82, 7, 1.
+A:
 ```
 
 *Output:*
@@ -165,5 +165,5 @@ That didn't work. It seems like few-shot prompting is not enough to get reliable
 
 Overall, it seems that providing examples is useful for solving some tasks. When zero-shot prompting and few-shot prompting are not sufficient, it might mean that whatever was learned by the model isn't enough to do well at the task. From here it is recommended to start thinking about fine-tuning your models or experimenting with more advanced prompting techniques. Up next we talk about one of the popular prompting techniques called chain-of-thought prompting which has gained a lot of popularity.
 
-整體而言，提供範例對於解決某些任務是有用的。當零-shot提示和少量提示不足時，這可能意味著模型所學習的內容不足以在任務上表現良好。因此建議開始考慮微調模型或嘗試更高階的提示技術。接下來，我們將談論一種名為「思維鏈提示」的流行提示技術。
+整體而言，提供範例對於解決某些任務是有用的。當zero-shot提示和少量提示不足時，這可能意味著模型所學習的內容不足以在任務上表現良好。因此建議開始考慮微調模型或嘗試更進階的提示技術。接下來，我們將談論一種名為「思維鏈提示」的流行提示技術。
 

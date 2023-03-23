@@ -32,7 +32,7 @@ blue
 The sky is blue on a clear day. On a cloudy day, the sky may be gray or white.
 ```
 
-As you can see, the language model outputs a continuation of strings that make sense give the context `"The sky is"`. The output might be unexpected or far from the task we want to accomplish. 
+As you can see, the language model outputs a continuation of strings that make sense give the context `"The sky is"`. The output might be unexpected or far from the task we want to accomplish.
 
 如您所見，語言模型輸出了一系列與上下文 "天空是" 相關的字串。輸出可能出乎意料或與我們想要完成的任務相距甚遠。
 
@@ -49,7 +49,7 @@ Let's try to improve it a bit:
 *提示:*
 
 ```
-Complete the sentence: 
+Complete the sentence:
 
 The sky is
 ```
@@ -62,13 +62,13 @@ The sky is
 so  beautiful today.
 ```
 
-Is that better? Well, we told the model to complete the sentence so the result looks a lot better as it follows exactly what we told it to do ("complete the sentence"). This approach of designing optimal prompts to instruct the model to perform a task is what's referred to as **prompt engineering**. 
+Is that better? Well, we told the model to complete the sentence so the result looks a lot better as it follows exactly what we told it to do ("complete the sentence"). This approach of designing optimal prompts to instruct the model to perform a task is what's referred to as **prompt engineering**.
 
 那樣好一些嗎？我們告訴模型完成句子，所以結果看起來更好，因為它完全按照我們告訴它要做的事情（“完成句子”）進行。設計最佳提示以指示模型執行任務的方法被稱為**提示工程**。
 
 The example above is a basic illustration of what's possible with LLMs today. Today's LLMs are able to perform all kinds of advanced tasks that range from text summarization to mathematical reasoning to code generation.
 
-以上示範是LLMs今天所能實現的基本說明。今天的LLMs能夠執行各種高階任務，從文字摘要到數學推理到代碼生成。
+以上示範是LLMs今天所能實現的基本說明。今天的LLMs能夠執行各種進階任務，從文字摘要到數學推理到代碼生成。
 
 ## Prompt Formatting
 
@@ -82,7 +82,7 @@ We have tried a very simple prompt above. A standard prompt has the following fo
 <Question>?
 ```
 
-or 
+or
 
 或
 
@@ -96,12 +96,12 @@ This can be formatted into a question answering (QA) format, which is standard i
 
 ```
 Q: <Question>?
-A: 
+A:
 ```
 
-When prompting like the above, it's also referred to as *zero-shot prompting*, i.e., you are directly prompting the model for a response without any examples or demonstrations about the task you want it to achieve. Some large language models do have the ability to perform zero-shot prompting but it depends on the complexity and knowledge of the task at hand. 
+When prompting like the above, it's also referred to as *zero-shot prompting*, i.e., you are directly prompting the model for a response without any examples or demonstrations about the task you want it to achieve. Some large language models do have the ability to perform zero-shot prompting but it depends on the complexity and knowledge of the task at hand.
 
-當像上面那樣提示時，它也被稱為*零-shot提示*，即，您直接提示模型進行回應，而不需要任何有關您想要實現的任務的示範或示範。一些大型語言模型確實具有執行零-shot提示的能力，但這取決於手頭任務的複雜性和知識。
+當像上面那樣提示時，它也被稱為*zero-shot提示*，即，您直接提示模型進行回應，而不需要任何有關您想要實現的任務的示範或示範。一些大型語言模型確實具有執行zero-shot提示的能力，但這取決於手頭任務的複雜性和知識。
 
 Given the standard format above, one popular and effective technique to prompting is referred to as *few-shot prompting* where we provide exemplars (i.e., demonstrations). Few-shot prompts can be formatted as follows:
 
