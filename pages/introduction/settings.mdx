@@ -1,11 +1,24 @@
 # LLM Settings
 
+# LLM 設定
+
 When working with prompts, you will be interacting with the LLM via an API or directly. You can configure a few parameters to get different results for your prompts. 
+
+當使用提示時，您將通過API或直接與LLM進行互動。您可以配置一些引數以獲得不同的提示結果。
 
 **Temperature** - In short, the lower the `temperature` the more deterministic the results in the sense that the highest probable next token is always picked. Increasing temperature could lead to more randomness encouraging more diverse or creative outputs. We are essentially increasing the weights of the other possible tokens. In terms of application, we might want to use a lower temperature value for tasks like fact-based QA to encourage more factual and concise responses. For poem generation or other creative tasks, it might be beneficial to increase the temperature value.
 
+**溫度** - 簡而言之，`溫度`越低，結果就越具有決定性，因為最有可能的下一個標記總是被選擇。增加溫度可能會導致更多的隨機性，鼓勵更多多樣化或創意性的輸出。我們本質上是增加了其他可能標記的權重。在應用方面，對於像基於事實的問答任務，我們可能希望使用較低的溫度值，以鼓勵更多事實和簡潔的回答。對於詩歌產生或其他創意任務，增加溫度值可能是有益的。
+
 **Top_p** - Similarly, with `top_p`, a sampling technique with temperature called nucleus sampling, you can control how deterministic the model is at generating a response. If you are looking for exact and factual answers keep this low. If you are looking for more diverse responses, increase to a higher value. 
+
+**Top_p** - 同樣地，使用 `top_p`，一種名為核心抽樣的溫度抽樣技術，您可以控制模型在產生回應時的決定性。如果您正在尋找精確和事實的答案，請保持較低。如果您正在尋找更多樣化的回應，請增加到較高的值。
 
 The general recommendation is to alter one, not both.
 
+一般建議只更改其中一個，而不是兩個都更改。
+
 Before starting with some basic examples, keep in mind that your results may vary depending on the version of LLM you are using.
+
+在開始一些基本範例之前，請記住您的結果可能會因您使用的LLM版本而有所不同。
+

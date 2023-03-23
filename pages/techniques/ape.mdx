@@ -1,26 +1,48 @@
 # Automatic Prompt Engineer (APE)
 
+# 自動提示工程師 (APE)
+
 import { Callout, FileTree } from 'nextra-theme-docs'
 import {Screenshot} from 'components/screenshot'
 import APE from '../../img/APE.png'
 import APECOT from '../../img/ape-zero-shot-cot.png'
 
 <Screenshot src={APE} alt="APE" />
-Image Source: [Zhou et al., (2022)](https://arxiv.org/abs/2211.01910)
+圖片來源：: [Zhou et al., (2022)](https://arxiv.org/abs/2211.01910)
 
-[Zhou et al., (2022)](https://arxiv.org/abs/2211.01910) propose automatic prompt engineer (APE) a framework for automatic instruction generation and selection. The instruction generation problem is framed as natural language synthesis addressed as a black-box optimization problem using LLMs to generate and search over candidate solutions. 
+[Zhou et al., (2022)](https://arxiv.org/abs/2211.01910) propose automatic prompt engineer (APE) a framework for automatic instruction generation and selection. The instruction generation problem is framed as natural language synthesis addressed as a black-box optimization problem using LLMs to generate and search over candidate solutions.
 
-The first step involves a large language model (as an inference model) that is given output demonstrations to generate instruction candidates for a task. These candidate solutions will guide the search procedure. The instructions are executed using a target model, and then the most appropriate instruction is selected based on computed evaluation scores. 
+[Zhou et al., (2022)](https://arxiv.org/abs/2211.01910) 提出了自動提示工程師（APE），一個自動指令產生和選擇的框架。指令產生問題被構建為自然語言合成，使用LLMs作為黑盒優化問題來產生和搜尋候選解決方案。
+
+The first step involves a large language model (as an inference model) that is given output demonstrations to generate instruction candidates for a task. These candidate solutions will guide the search procedure. The instructions are executed using a target model, and then the most appropriate instruction is selected based on computed evaluation scores.
+
+第一步涉及使用大型語言模型（作為推理模型），該模型接收輸出示範以產生任務的指令候選項。這些候選解決方案將指導搜尋過程。使用目標模型執行指令，然後根據計算的評估分數選擇最合適的指令。
 
 APE discovers a better zero-shot CoT prompt than the human engineered "Let's think step by step" prompt (Kojima et al., 2022).
 
+APE 發現了一個比人工設計的“讓我們逐步思考”提示（Kojima等人，2022）更好的零-shot CoT提示。
+
 The prompt "Let's work this out it a step by step to be sure we have the right answer." elicits chain-of-though reasoning and improves performance on the MultiArith and GSM8K benchmarks:
+
+提示“讓我們逐步解決問題，確保我們得到正確的答案。”引發了逐步推理，並提高了MultiArith和GSM8K基準測試的效能：
 
 <Screenshot src={APECOT} alt="APECOT" />
 Image Source: [Zhou et al., (2022)](https://arxiv.org/abs/2211.01910)
 
+<Screenshot src={APECOT} alt="APECOT" />
+圖片來源：[Zhou et al.，(2022)](https://arxiv.org/abs/2211.01910)
+
 This paper touches on an important topic related to prompt engineering which is the idea of automatically optimizing prompts. While we don't go deep into this topic in this guide, here are a few key papers if you are interested in the topic:
 
+本文涉及與快速工程相關的重要主題，即自動優化提示的想法。雖然我們在本指南中沒有深入探討這個主題，但如果您對此感興趣，以下是一些關鍵論文：
+
 - [AutoPrompt](https://arxiv.org/abs/2010.15980) - proposes an approach to automatically create prompts for a diverse set of tasks based on gradient-guided search.
-- [Prefix Tuning](https://arxiv.org/abs/2101.00190) - a lightweight alternative to fine-tuning that prepends a trainable continuous prefix for NLG tasks. 
+- [Prefix Tuning](https://arxiv.org/abs/2101.00190) - a lightweight alternative to fine-tuning that prepends a trainable continuous prefix for NLG tasks.
 - [Prompt Tuning](https://arxiv.org/abs/2104.08691) - proposes a mechanism for learning soft prompts through backpropagation.
+
+---
+
+- [AutoPrompt](https://arxiv.org/abs/2010.15980) - 提出了一種基於梯度引導搜尋的方法，自動為各種任務建立提示。
+- [Prefix Tuning](https://arxiv.org/abs/2101.00190) - 是一種輕量級的fine-tuning替代方案，為NLG任務新增了一個可訓練的連續字首。
+- [Prompt Tuning](https://arxiv.org/abs/2104.08691) - 提出了一種透過反向傳播學習軟提示的機制。
+

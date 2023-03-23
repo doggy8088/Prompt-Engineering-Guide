@@ -1,7 +1,15 @@
 # Zero-Shot Prompting
+
+# 零樣本提示
+
 LLMs today trained on large amounts of data and tuned to follow instructions, are capable of performing tasks zero-shot. We tried a few zero-shot examples in the previous section. Here is one of the examples we used:
 
+今天的LLMs在大量的資料訓練和調整後，能夠執行零-shot任務。我們在前一節中嘗試了一些零-shot示範。這是我們使用的其中一個示範：
+
 *Prompt:*
+
+*提示:*
+
 ```
 Classify the text into neutral, negative or positive. 
 
@@ -10,12 +18,22 @@ Sentiment:
 ```
 
 *Output:*
+
+*輸出:*
+
 ```
 Neutral
 ```
 
 Note that in the prompt above we didn't provide the model with any examples -- that's the zero-shot capabilities at work. 
 
+請注意，上面的提示中我們沒有向模型提供任何示範——這就是零-shot能力在發揮作用。
+
 Instruction tuning has shown to improve zero-shot learning [Wei et al. (2022)](https://arxiv.org/pdf/2109.01652.pdf). Instruction tuning is essentially the concept of finetuning models on datasets described via instructions. Furthermore, [RLHF](https://arxiv.org/abs/1706.03741) (reinforcement learning from human feedback) has been adopted to scale instruction tuning wherein the model is aligned to better fit human preferences. This recent development powers models like ChatGPT. We will discuss all these approaches and methods in upcoming sections.
 
+指令微調已被證明可以改善零樣本學習[Wei et al. (2022)](https://arxiv.org/pdf/2109.01652.pdf)。指令微調本質上是在描述指令的資料集上微調模型的概念。此外，[RLHF](https://arxiv.org/abs/1706.03741)（從人類反饋中進行強化學習）已被採用來擴充套件指令微調，使模型更好地適應人類偏好。這一最新發展推動了像ChatGPT這樣的模型。我們將在接下來的章節中討論所有這些方法和方法。
+
 When zero-shot doesn't work, it's recommended to provide demonstrations or examples in the prompt which leads to few-shot prompting. In the next section, we demonstrate few-shot prompting.
+
+當零-shot 無法運作時，建議在提示中提供示範或範例，以進行少量-shot 提示。在下一節中，我們將展示少量-shot 提示。
+

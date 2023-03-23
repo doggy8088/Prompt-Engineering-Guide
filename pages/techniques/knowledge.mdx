@@ -1,5 +1,7 @@
 # Generated Knowledge Prompting
 
+# 產生知識提示
+
 import {Screenshot} from 'components/screenshot'
 import GENKNOW from '../../img/gen-knowledge.png'
 
@@ -7,27 +9,48 @@ import GENKNOW from '../../img/gen-knowledge.png'
 
 Image Source: [Liu et al. 2022](https://arxiv.org/pdf/2110.08387.pdf)
 
-LLMs continue to be improved and one popular technique includes the ability to incorporate knowledge or information to help the model make more accurate predictions. 
+圖片來源：[Liu et al. 2022](https://arxiv.org/pdf/2110.08387.pdf)
+
+LLMs continue to be improved and one popular technique includes the ability to incorporate knowledge or information to help the model make more accurate predictions.
+
+LLMs持續改進，其中一種流行的技術包括能夠整合知識或資訊，以幫助模型做出更準確的預測。
 
 Using a similar idea, can the model also be used to generate knowledge before making a prediction? That's what is attempted in the paper by [Liu et al. 2022](https://arxiv.org/pdf/2110.08387.pdf) -- generate knowledge to be used as part of the prompt. In particular, how helpful is this for tasks such as commonsense reasoning?
 
+使用類似的思路，該模型是否也可以用於在進行預測之前產生知識？這正是[Liu et al. 2022](https://arxiv.org/pdf/2110.08387.pdf)的論文中所嘗試的——產生可用作提示的知識。特別是，這對於常識推理等任務有多大幫助？
+
 Let's try a simple prompt:
 
+讓我們試試一個簡單的提示：
+
 *Prompt:*
+
+*提示:*
+
 ```
 Part of golf is trying to get a higher point total than others. Yes or No?
 ```
 
 *Output:*
+
+*輸出:*
+
 ```
 Yes.
 ```
 
 This type of mistake reveals the limitations of LLMs to perform tasks that require more knowledge about the world. How do we improve this with knowledge generation?
 
+這種錯誤顯示了LLMs在執行需要更多關於世界知識的任務時的限制。我們如何透過知識產生來改善這種情況？
+
 First, we generate a few "knowledges":
 
+首先，我們產生一些“知識”：
+
 *Prompt:*
+
+*提示:*
+
 ```
 Input: Greece is larger than mexico.
 Knowledge: Greece is approximately 131,957 sq km, while Mexico is approximately 1,964,375 sq km, making Mexico 1,389% larger than Greece.
@@ -49,29 +72,45 @@ Knowledge:
 ```
 
 *Knowledge 1:*
+
+*知識 1:*
+
 ```
 The objective of golf is to play a set of holes in the least number of strokes. A round of golf typically consists of 18 holes. Each hole is played once in the round on a standard golf course. Each stroke is counted as one point, and the total number of strokes is used to determine the winner of the game.
 ```
 
 *Knowledge 2:*
+
+*知識 2:*
+
 ```
 Golf is a precision club-and-ball sport in which competing players (or golfers) use many types of clubs to hit balls into a series of holes on a course using the fewest number of strokes. The goal is to complete the course with the lowest score, which is calculated by adding up the total number of strokes taken on each hole. The player with the lowest score wins the game.
 ```
 
 We are using the prompt provided in the paper by [Liu et al. 2022](https://arxiv.org/pdf/2110.08387.pdf).
 
+我們正在使用[Liu等人2022年](https://arxiv.org/pdf/2110.08387.pdf)論文中提供的提示。
+
 The next step is to integrate the knowledge and get a prediction. I reformatted the question into QA format to guide the answer format.
 
+下一步是整合知識並進行預測。我將問題重新格式化為問答格式，以引導回答格式。
+
 *Prompt:*
+
+*提示:*
+
 ```
 Question: Part of golf is trying to get a higher point total than others. Yes or No?
 
 Knowledge: The objective of golf is to play a set of holes in the least number of strokes. A round of golf typically consists of 18 holes. Each hole is played once in the round on a standard golf course. Each stroke is counted as one point, and the total number of strokes is used to determine the winner of the game.
 
-Explain and Answer: 
+Explain and Answer:
 ```
 
 *Answer 1 (confidence very high):*
+
+*答案 1（非常有把握）：*
+
 ```
 No, the objective of golf is not to get a higher point total than others. Rather, the objective is to play a set of holes in the least number of strokes. The total number of strokes is used to determine the winner of the game, not the total number of points.
 ```
@@ -85,8 +124,14 @@ Explain and Answer:
 ```
 
 *Answer 2 (confidence is a lot lower):*
+
+*答案2（信心低得多）：*
+
 ```
 Yes, part of golf is trying to get a higher point total than others. Each player tries to complete the course with the lowest score, which is calculated by adding up the total number of strokes taken on each hole. The player with the lowest score wins the game.
 ```
 
 Some really interesting things happened with this example. In the first answer, the model was very confident but in the second not so much. I simplify the process for demonstration purposes but there are a few more details to consider when arriving at the final answer. Check out the paper for more.
+
+這個例子發生了一些非常有趣的事情。在第一個答案中，模型非常自信，但在第二個答案中則不太自信。我為了示範目的簡化了過程，但在得出最終答案時還有一些細節需要考慮。請檢視論文以獲取更多資訊。
+

@@ -1,15 +1,32 @@
 # Multimodal CoT Prompting
 
+# 多模式 CoT 提示
+
 import { Callout, FileTree } from 'nextra-theme-docs'
 import {Screenshot} from 'components/screenshot'
 import MCOT from '../../img/multimodal-cot.png'
 
 [Zhang et al. (2023)](https://arxiv.org/abs/2302.00923) recently proposed a multimodal chain-of-thought prompting approach. Traditional CoT focuses on the language modality. In contrast, Multimodal CoT incorporates text and vision into a two-stage framework. The first step involves rationale generation based on multimodal information. This is followed by the second phase, answer inference, which leverages the informative generated rationales.
 
+[Zhang等人（2023）](https://arxiv.org/abs/2302.00923) 最近提出了一種多模態的思維鏈提示方法。傳統的CoT側重於語言模態。相比之下，多模態CoT將文字和視覺融入到一個兩階段框架中。第一步涉及基於多模態資訊的理由產生。接下來是第二階段的答案推理，利用產生的理由進行推理。
+
 The multimodal CoT model (1B) outperforms GPT-3.5 on the ScienceQA benchmark.
+
+多模式 CoT 模型（1B）在 ScienceQA 基準測試中表現優於 GPT-3.5。
 
 <Screenshot src={MCOT} alt="MCOT" />
 Image Source: [Zhang et al. (2023)](https://arxiv.org/abs/2302.00923)
 
+<Screenshot src={MCOT} alt="MCOT" />
+圖片來源：[Zhang et al. (2023)](https://arxiv.org/abs/2302.00923)
+
 Further reading:
+
+Further reading: (進一步閱讀:)
+
 - [Language Is Not All You Need: Aligning Perception with Language Models](https://arxiv.org/abs/2302.14045) (Feb 2023)
+
+---
+
+- [語言不是你所需要的全部：將感知與語言模型對齊](https://arxiv.org/abs/2302.14045) (2023年2月)
+

@@ -1,15 +1,34 @@
 # Factuality
 
+# 真實性
+
 LLMs have a tendency to generate responses that sounds coherent and convincing but can sometimes be made up. Improving prompts can help improve the model to generate more accurate/factual responses and reduce the likelihood to generate inconsistent and made up responses. 
 
+LLMs有時會產生聽起來連貫且有說服力的回覆，但有時可能是虛構的。改進提示可以幫助改善模型以產生更準確/真實的回覆，並減少產生不一致和虛構回覆的可能性。
+
 Some solutions might include:
+
+一些解決方案可能包括：
+
 - provide ground truth (e.g., related article paragraph or Wikipedia entry) as part of context to reduce the likelihood of the model producing made up text.
 - configure the model to produce less diverse responses by decreasing the probability parameters and instructing it to admit (e.g., "I don't know") when it doesn't know the answer. 
 - provide in the prompt a combination of examples of questions and responses that it might know about and not know about
 
+
+---
+
+- 提供真實的背景資訊（例如相關文章段落或維基百科條目），以減少模型產生虛假文字的可能性。
+- 透過降低機率引數並指示模型在不知道答案時承認（例如，“我不知道”）來配置模型以產生較少多樣化的響應。
+- 在提示中提供問題和答案的組合示範，包括可能已知和未知的內容。
+
 Let's look at a simple example:
 
+讓我們來看一個簡單的例子：
+
 *Prompt:*
+
+*提示:*
+
 ```
 Q: What is an atom? 
 A: An atom is a tiny particle that makes up everything. 
@@ -27,8 +46,14 @@ Q: Who is Neto Beto Roberto?
 ```
 
 *Output:*
+
+*輸出:*
+
 ```
 A: ?
 ```
 
 I made up the name "Neto Beto Roberto" so the model is correct in this instance. Try to change the question a bit and see if you can get it to work. There are different ways you can improve this further based on all that you have learned so far.
+
+我編造了“Neto Beto Roberto”這個名字，所以在這種情況下模型是正確的。試著稍微改變一下問題，看看能否讓它起作用。根據你到目前為止所學到的一切，有不同的方法可以進一步改進它。
+

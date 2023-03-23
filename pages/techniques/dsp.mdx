@@ -1,16 +1,30 @@
 # Directional Stimulus Prompting
 
+# 方向性刺激提示
+
 import { Callout, FileTree } from 'nextra-theme-docs'
 import {Screenshot} from 'components/screenshot'
 import DSP from '../../img/dsp.jpeg'
 
 [Li et al., (2023)](https://arxiv.org/abs/2302.11520) proposes a new prompting technique to better guide the LLM in generating the desired summary.
 
+[Li等人，(2023)](https://arxiv.org/abs/2302.11520) 提出了一種新的提示技術，以更好地指導LLM產生所需的摘要。
+
 A tuneable policy LM is trained to generate the stimulus/hint. Seeing more use of RL to optimize LLMs.
 
+一種可調的策略語言模型被訓練用於產生刺激/提示。看到越來越多使用強化學習來優化低級語言模型。
+
 The figure below shows how Directional Stimulus Prompting compares with standard prompting. The policy LM can be small and optimized to generate the hints that guide a black-box frozen LLM.
+
+下面的圖表顯示了定向刺激提示與標準提示的比較。政策LM可以很小，並且可以優化以產生提示，以指導黑盒子凍結LLM。
 
 <Screenshot src={DSP} alt="DSP" />
 Image Source: [Li et al., (2023)](https://arxiv.org/abs/2302.11520)
 
+<Screenshot src={DSP} alt="DSP" />
+圖片來源：[Li et al.，(2023)](https://arxiv.org/abs/2302.11520)
+
 Full example coming soon!
+
+完整的範例即將推出!
+

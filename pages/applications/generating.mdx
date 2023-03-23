@@ -1,7 +1,15 @@
 # Generating Data
+
+# 產生資料
+
 LLMs have strong capabilities to generate coherent text. Using effective prompt strategies can steer the model to produce better, consistent, and more factual responses. LLMs can also be especially useful for generating data which is really useful to run all sorts of experiments and evaluations. For example, we can use it to generate quick samples for a sentiment classifier like so:
 
+LLMs 具有產生連貫文字的強大能力。使用有效的提示策略可以引導模型產生更好、更一致和更真實的響應。LLMs 還可以特別有用地產生資料，這些資料對於執行各種實驗和評估非常有用。例如，我們可以使用它來產生快速樣本，用於情感分類器的訓練。
+
 *Prompt:*
+
+*提示:*
+
 ```
 Produce 10 exemplars for sentiment analysis. Examples are categorized as either positive or negative. Produce 2 negative examples and 8 positive examples. Use this format for the examples:
 Q: <sentence>
@@ -9,6 +17,9 @@ A: <sentiment>
 ```
 
 *Output:*
+
+*輸出:*
+
 ```
 Q: I just got the best news ever!
 A: Positive
@@ -42,3 +53,6 @@ A: Negative
 ```
 
 This is very useful. We actually use this example for a different test in another section of the guides.
+
+這非常有用。實際上，我們在指南的另一個部分中使用此示範進行不同的測試。
+

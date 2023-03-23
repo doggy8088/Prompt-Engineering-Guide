@@ -1,17 +1,31 @@
 # Basics of Prompting
 
+# 提示的基本知識
+
 ## Basic Prompts
+
+## 基本提示
 
 You can achieve a lot with simple prompts, but the quality of results depends on how much information you provide it and how well-crafted it is. A prompt can contain information like the *instruction* or *question* you are passing to the model and including other details such as *context*, *inputs*, or *examples*. You can use these elements to instruct the model better and as a result get better results.
 
+你可以透過簡單的提示實現很多，但結果的品質取決於你提供的資訊量和提示的精細程度。提示可以包含諸如傳遞給模型的“指令”或“問題”之類的資訊，以及其他細節，例如“上下文”、“輸入”或“示範”。你可以使用這些元素更好地指導模型，從而獲得更好的結果。
+
 Let's get started by going over a basic example of a simple prompt:
 
+讓我們開始透過簡單提示的基本示範。
+
 *Prompt*
+
+*提示*
+
 ```
 The sky is
 ```
 
 *Output:*
+
+*輸出:*
+
 ```
 blue
 
@@ -20,11 +34,20 @@ The sky is blue on a clear day. On a cloudy day, the sky may be gray or white.
 
 As you can see, the language model outputs a continuation of strings that make sense give the context `"The sky is"`. The output might be unexpected or far from the task we want to accomplish. 
 
+如您所見，語言模型輸出了一系列與上下文 "天空是" 相關的字串。輸出可能出乎意料或與我們想要完成的任務相距甚遠。
+
 This basic example also highlights the necessity to provide more context or instructions on what specifically we want to achieve.
+
+這個基本範例也凸顯了需要提供更多上下文或指示，以確切瞭解我們想要實現的目標。
 
 Let's try to improve it a bit:
 
+讓我們試著稍微改進它：
+
 *Prompt:*
+
+*提示:*
+
 ```
 Complete the sentence: 
 
@@ -33,17 +56,27 @@ The sky is
 
 *Output:*
 
+*輸出:*
+
 ```
 so  beautiful today.
 ```
 
 Is that better? Well, we told the model to complete the sentence so the result looks a lot better as it follows exactly what we told it to do ("complete the sentence"). This approach of designing optimal prompts to instruct the model to perform a task is what's referred to as **prompt engineering**. 
 
+那樣好一些嗎？我們告訴模型完成句子，所以結果看起來更好，因為它完全按照我們告訴它要做的事情（“完成句子”）進行。設計最佳提示以指示模型執行任務的方法被稱為**提示工程**。
+
 The example above is a basic illustration of what's possible with LLMs today. Today's LLMs are able to perform all kinds of advanced tasks that range from text summarization to mathematical reasoning to code generation.
+
+以上示範是LLMs今天所能實現的基本說明。今天的LLMs能夠執行各種高階任務，從文字摘要到數學推理到代碼生成。
 
 ## Prompt Formatting
 
+## 提示格式化
+
 We have tried a very simple prompt above. A standard prompt has the following format:
+
+我們剛才使用了一個非常簡單的提示。標準提示的格式如下：
 
 ```
 <Question>?
@@ -51,11 +84,15 @@ We have tried a very simple prompt above. A standard prompt has the following fo
 
 or 
 
+或
+
 ```
 <Instruction>
 ```
- 
+
 This can be formatted into a question answering (QA) format, which is standard in a lot of QA datasets, as follows:
+
+這可以格式化為問答（QA）格式，這在許多QA資料集中是標準的，如下所示：
 
 ```
 Q: <Question>?
@@ -64,7 +101,11 @@ A:
 
 When prompting like the above, it's also referred to as *zero-shot prompting*, i.e., you are directly prompting the model for a response without any examples or demonstrations about the task you want it to achieve. Some large language models do have the ability to perform zero-shot prompting but it depends on the complexity and knowledge of the task at hand. 
 
+當像上面那樣提示時，它也被稱為*零-shot提示*，即，您直接提示模型進行回應，而不需要任何有關您想要實現的任務的示範或示範。一些大型語言模型確實具有執行零-shot提示的能力，但這取決於手頭任務的複雜性和知識。
+
 Given the standard format above, one popular and effective technique to prompting is referred to as *few-shot prompting* where we provide exemplars (i.e., demonstrations). Few-shot prompts can be formatted as follows:
+
+鑑於上述的標準格式，一種流行且有效的提示技術被稱為*少量提示*，其中我們提供範例（即示範）。 少量提示可以格式化如下：
 
 ```
 <Question>?
@@ -82,6 +123,8 @@ Given the standard format above, one popular and effective technique to promptin
 
 The QA format version would look like this:
 
+The QA格式版本將會長成這樣：
+
 ```
 Q: <Question>?
 A: <Answer>
@@ -98,7 +141,12 @@ A:
 
 Keep in mind that it's not required to use QA format. The prompt format depends on the task at hand. For instance, you can perform a simple classification task and give exemplars that demonstrate the task as follows:
 
+請記住，並非必須使用QA格式。提示格式取決於手頭的任務。例如，您可以執行簡單的分類任務，並提供以下示範以示範該任務：
+
 *Prompt:*
+
+*提示:*
+
 ```
 This is awesome! // Positive
 This is bad! // Negative
@@ -107,8 +155,14 @@ What a horrible show! //
 ```
 
 *Output:*
+
+*輸出:*
+
 ```
 Negative
 ```
 
 Few-shot prompts enable in-context learning which is the ability of language models to learn tasks given a few demonstrations.
+
+Few-shot提示使上下文學習成為可能，即語言模型在給定少量示範的情況下學習任務的能力。
+
