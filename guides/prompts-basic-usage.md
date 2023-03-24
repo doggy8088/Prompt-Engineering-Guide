@@ -185,7 +185,7 @@ Context obtained from [Nature](https://www.nature.com/articles/d41586-023-00400-
 
 So far, we have used simple instructions to perform a task. As a prompt engineer, you will need to get better at providing better instructions. But that's not all! You will also find that for harder use cases, just providing instructions won't be enough. This is where you need to think more about the context and the different elements you can use in a prompt. Other elements you can provide are `input data` or `examples`.
 
-到目前為止，我們使用簡單的指令來執行任務。作為提示工程師，您需要提供更好的指令。但這還不是全部！您還會發現，對於更難的用例，僅提供指令是不夠的。這就是您需要更多地考慮上下文和提示中可以使用的不同元素的地方。您可以提供的其他元素包括“輸入資料”或“示範”。
+到目前為止，我們使用簡單的指令來執行任務。作為提示工程師，您需要提供更好的指令。但這還不是全部！您還會發現，對於更難的使用案例，僅提供指令是不夠的。這就是您需要更多地考慮上下文和提示中可以使用的不同元素的地方。您可以提供的其他元素包括“輸入資料”或“示範”。
 
 Let's try to demonstrate this by providing an example of text classification.
 

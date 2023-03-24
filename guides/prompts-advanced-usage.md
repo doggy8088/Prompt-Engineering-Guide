@@ -19,20 +19,19 @@ Topics:
   - [Zero-Shot Prompting](#zero-shot-prompting)
   - [零樣本提示](#零樣本提示)
   - [Few-Shot Prompting](#few-shot-prompting)
-  - [少量激勵](#少量激勵)
+  - [少量樣本提示](#少量樣本提示)
     - [Limitations of Few-shot Prompting](#limitations-of-few-shot-prompting)
-    - [Few-shot Prompting 的限制](#few-shot-prompting-的限制)
+    - [少量樣本提示的限制](#少量樣本提示的限制)
   - [Chain-of-Thought Prompting](#chain-of-thought-prompting)
   - [關聯思考提示](#關聯思考提示)
   - [Zero-Shot CoT](#zero-shot-cot)
   - [零樣本CoT](#零樣本cot)
   - [Self-Consistency](#self-consistency)
-  - [自洽性](#自洽性)
+  - [自我一致性](#自我一致性)
   - [Generated Knowledge Prompting](#generated-knowledge-prompting)
   - [產生知識提示](#產生知識提示)
   - [Automatic Prompt Engineer (APE)](#automatic-prompt-engineer-ape)
   - [自動提示工程師 (APE)](#自動提示工程師-ape)
-
 
 ---
 
@@ -81,15 +80,15 @@ Note that in the prompt above we didn't provide the model with any examples -- t
 
 ## Few-Shot Prompting
 
-## 少量激勵
+## 少量樣本提示
 
 While large-language models already demonstrate remarkable zero-shot capabilities, they still fall short on more complex tasks when using the zero-shot setting. To improve on this, few-shot prompting is used as a technique to enable in-context learning where we provide demonstrations in the prompt to steer the model to better performance. The demonstrations serve as conditioning for subsequent examples where we would like the model to generate a response.
 
-雖然大型語言模型已經展現出了非凡的zero-shot能力，但在使用zero-shot設定時，它們仍然在更複雜的任務上表現不佳。為了改善這一點，採用了少量提示的技術，以實現上下文學習，在提示中提供示範以引導模型實現更好的效能。這些示範作為後續示範的條件，我們希望模型能夠產生回應。
+雖然大型語言模型已經展現出了非凡的zero-shot能力，但在使用zero-shot設定時，它們仍然在更複雜的任務上表現不佳。為了改善這一點，採用了少量樣本提示的技術，以實現上下文學習，在提示中提供示範以引導模型實現更好的效能。這些示範作為後續示範的條件，我們希望模型能夠產生回應。
 
 Let's demonstrate few-shot prompting via an example that was presented by [Brown et al. 2020](https://arxiv.org/abs/2005.14165). In the example, the task is to correctly use a new word in a sentence.
 
-讓我們透過 [Brown et al. 2020](https://arxiv.org/abs/2005.14165) 提出的一個例子來示範 few-shot prompting。在這個例子中，任務是在句子中正確使用一個新單詞。
+讓我們透過 [Brown et al. 2020](https://arxiv.org/abs/2005.14165) 提出的一個例子來示範少量樣本提示。在這個例子中，任務是在句子中正確使用一個新單詞。
 
 *Prompt:*
 
@@ -183,11 +182,11 @@ There is no consistency in the format above but the model still predicted the co
 
 ### Limitations of Few-shot Prompting
 
-### Few-shot Prompting 的限制
+### 少量樣本提示的限制
 
 Standard few-shot prompting works well for many tasks but is still not a perfect technique, especially when dealing with more complex reasoning tasks. Let's demonstrate why this is the case. Do you recall the previous example where we provided the following task:
 
-標準的少量激勵技術對許多任務都有效，但在處理更複雜的推理任務時仍不是一種完美的技術。讓我們來示範一下為什麼會這樣。您還記得我們之前提供的以下任務嗎：
+標準的少量樣本提示技術對許多任務都有效，但在處理更複雜的推理任務時仍不是一種完美的技術。讓我們來示範一下為什麼會這樣。您還記得我們之前提供的以下任務嗎：
 
 ```
 The odd numbers in this group add up to an even number: 15, 32, 5, 13, 82, 7, 1.
@@ -209,7 +208,7 @@ This is not the correct response, which not only highlights the limitations of t
 
 Let's try to add some examples to see if few-shot prompting improves the results.
 
-讓我們嘗試新增一些例子，看看少量提示是否可以改善結果。
+讓我們嘗試新增一些例子，看看少量樣本提示是否可以改善結果。
 
 *Prompt:*
 
@@ -242,11 +241,11 @@ The answer is True.
 
 That didn't work. It seems like few-shot prompting is not enough to get reliable responses for this type of reasoning problem. The example above provides basic information on the task. If you take a closer look, the type of task we have introduced involves a few more reasoning steps. In other words, it might help if we break the problem down into steps and demonstrate that to the model. More recently, [chain-of-thought (CoT) prompting](https://arxiv.org/abs/2201.11903) has been popularized to address more complex arithmetic, commonsense, and symbolic reasoning tasks.
 
-那行不通。似乎少量提示不足以獲得此類推理問題的可靠響應。上面的示範提供了有關任務的基本資訊。如果您仔細觀察，我們引入的任務型別涉及更多的推理步驟。換句話說，如果我們將問題分解成步驟並向模型示範，可能會有所幫助。最近，[思維鏈 (CoT)提示](https://arxiv.org/abs/2201.11903)已經流行起來，以解決更複雜的算術、常識和符號推理任務。
+那行不通。似乎少量樣本提示不足以獲得此類推理問題的可靠響應。上面的示範提供了有關任務的基本資訊。如果您仔細觀察，我們引入的任務型別涉及更多的推理步驟。換句話說，如果我們將問題分解成步驟並向模型示範，可能會有所幫助。最近，[思維鏈 (CoT)提示](https://arxiv.org/abs/2201.11903)已經流行起來，以解決更複雜的算術、常識和符號推理任務。
 
 Overall, it seems that providing examples is useful for solving some tasks. When zero-shot prompting and few-shot prompting are not sufficient, it might mean that whatever was learned by the model isn't enough to do well at the task. From here it is recommended to start thinking about fine-tuning your models or experimenting with more advanced prompting techniques. Up next we talk about one of the popular prompting techniques called chain-of-thought prompting which has gained a lot of popularity.
 
-總的來說，提供示範對於解決某些任務是有用的。當zero-shot提示和少量提示不足時，這可能意味著模型學到的內容不足以在任務上表現良好。從這裡開始，建議開始考慮微調模型或嘗試更進階的提示技術。接下來，我們將討論一種流行的提示技術，稱為思維鏈提示，它已經獲得了很多的關注。
+總的來說，提供示範對於解決某些任務是有用的。當zero-shot提示和少量樣本提示不足時，這可能意味著模型學到的內容不足以在任務上表現良好。從這裡開始，建議開始考慮微調模型或嘗試更進階的提示技術。接下來，我們將討論一種流行的提示技術，稱為思維鏈提示，它已經獲得了很多的關注。
 
 ---
 
@@ -256,7 +255,7 @@ Overall, it seems that providing examples is useful for solving some tasks. When
 
 Introduced in [Wei et al. (2022)](https://arxiv.org/abs/2201.11903), chain-of-thought (CoT) prompting enables complex reasoning capabilities through intermediate reasoning steps. You can combine it with few-shot prompting to get better results on more complex tasks that require reasoning before responding.
 
-引入自[Wei et al. (2022)](https://arxiv.org/abs/2201.11903)的思路鏈（CoT）提示，透過中間推理步驟實現複雜的推理能力。您可以將其與少量提示結合使用，以獲得更好的結果，以應對需要在回答之前進行推理的更複雜任務。
+引入自[Wei et al. (2022)](https://arxiv.org/abs/2201.11903)的思路鏈（CoT）提示，透過中間推理步驟實現複雜的推理能力。您可以將其與少量樣本提示結合使用，以獲得更好的結果，以應對需要在回答之前進行推理的更複雜任務。
 
 *Prompt:*
 
@@ -374,11 +373,11 @@ It's impressive that this simple prompt is effective at this task. This is parti
 
 ## Self-Consistency
 
-## 自洽性
+## 自我一致性
 
 Perhaps one of the more advanced techniques out there for prompt engineering is self-consistency. Proposed by [Wang et al. (2022)](https://arxiv.org/pdf/2203.11171.pdf), self-consistency aims "to replace the naive greedy decoding used in chain-of-thought prompting". The idea is to sample multiple, diverse reasoning paths through few-shot CoT, and use the generations to select the most consistent answer. This helps to boost the performance of CoT prompting on tasks involving arithmetic and commonsense reasoning.
 
-或許在提示工程中，更高級的技術之一是自洽性。由 [Wang et al. (2022)](https://arxiv.org/pdf/2203.11171.pdf) 提出，自洽性旨在「取代鏈式思考提示中使用的天真貪婪解碼」。其想法是透過少量樣本的多樣化推理路徑進行抽樣，並使用產生的結果選擇最一致的答案。這有助於提高鏈式思考提示在涉及算術和常識推理的任務中的效能。
+或許在提示工程中，更進階的技術之一是自我一致性(self-consistency)。由 [Wang et al. (2022)](https://arxiv.org/pdf/2203.11171.pdf) 提出，自我一致性旨在「取代鏈式思考提示中使用的天真貪婪解碼」。其想法是透過少量樣本(few-shot)的多樣化推理路徑進行抽樣，並使用產生的結果選擇最一致的答案。這有助於提高鏈式思考提示在涉及算術和常識推理的任務中的效能。
 
 Let's try the following example for arithmetic reasoning:
 
@@ -403,7 +402,7 @@ I’m 70 how old is my sister?
 
 The output is wrong! How may we improve this with self-consistency? Let's try it out. We will use the few-shot exemplars from Wang et al. 2022 (Table 17):
 
-輸出結果是錯誤的！我們如何透過自洽性來改進它？讓我們試試看。我們將使用王等人的2022年少量樣本示範（表17）：
+輸出結果是錯誤的！我們如何透過自我一致性來改進它？讓我們試試看。我們將使用王等人的2022年少量樣本(few-shot)示範（表17）：
 
 *Prompt:*
 

@@ -1,10 +1,10 @@
 # Few-Shot Prompting
 
-# Few-Shot Prompting (少量激勵)
+# 少量樣本提示
 
 While large-language models demonstrate remarkable zero-shot capabilities, they still fall short on more complex tasks when using the zero-shot setting. Few-shot prompting can be used as a technique to enable in-context learning where we provide demonstrations in the prompt to steer the model to better performance. The demonstrations serve as conditioning for subsequent examples where we would like the model to generate a response.
 
-雖然大型語言模型展現了非凡的zero-shot能力，但在使用zero-shot設定時，它們仍然在更複雜的任務上表現不佳。少量提示可以用作一種技術，以實現上下文學習，其中我們在提示中提供示範以引導模型實現更好的效能。這些示範作為後續示範的條件，我們希望模型產生回應。
+雖然大型語言模型展現了非凡的zero-shot能力，但在使用zero-shot設定時，它們仍然在更複雜的任務上表現不佳。少量樣本提示可以用作一種技術，以實現上下文學習，其中我們在提示中提供示範以引導模型實現更好的效能。這些示範作為後續示範的條件，我們希望模型產生回應。
 
 Let's demonstrate few-shot prompting via an example that was presented in [Brown et al. 2020](https://arxiv.org/abs/2005.14165). In the example, the task is to correctly use a new word in a sentence.
 
@@ -106,7 +106,7 @@ There is no consistency in the format above but the model still predicted the co
 
 Standard few-shot prompting works well for many tasks but is still not a perfect technique, especially when dealing with more complex reasoning tasks. Let's demonstrate why this is the case. Do you recall the previous example where we provided the following task:
 
-標準的少量樣本提示對許多任務都有效，但在處理更複雜的推理任務時仍不是一種完美的技術。讓我們示範一下為什麼會這樣。您還記得我們之前提供的以下任務的例子嗎：
+標準的少量樣本(few-shot)提示對許多任務都有效，但在處理更複雜的推理任務時仍不是一種完美的技術。讓我們示範一下為什麼會這樣。您還記得我們之前提供的以下任務的例子嗎：
 
 ```
 The odd numbers in this group add up to an even number: 15, 32, 5, 13, 82, 7, 1.
@@ -128,7 +128,7 @@ This is not the correct response, which not only highlights the limitations of t
 
 Let's try to add some examples to see if few-shot prompting improves the results.
 
-讓我們嘗試新增一些例子，看看少量提示是否可以改善結果。
+讓我們嘗試新增一些例子，看看少量樣本提示是否可以改善結果。
 
 *Prompt:*
 
@@ -161,9 +161,9 @@ The answer is True.
 
 That didn't work. It seems like few-shot prompting is not enough to get reliable responses for this type of reasoning problem. The example above provides basic information on the task. If you take a closer look, the type of task we have introduced involves a few more reasoning steps. In other words, it might help if we break the problem down into steps and demonstrate that to the model. More recently, [chain-of-thought (CoT) prompting](https://arxiv.org/abs/2201.11903) has been popularized to address more complex arithmetic, commonsense, and symbolic reasoning tasks.
 
-那行不通。似乎少量提示不足以獲得此類推理問題的可靠響應。上面的示範提供了有關任務的基本資訊。如果您仔細觀察，我們引入的任務型別涉及更多的推理步驟。換句話說，如果我們將問題分解成步驟並向模型示範，可能會有所幫助。最近，[思維鏈 (CoT)提示](https://arxiv.org/abs/2201.11903)已經流行起來，以解決更複雜的算術、常識和符號推理任務。
+那行不通。似乎少量樣本提示不足以獲得此類推理問題的可靠響應。上面的示範提供了有關任務的基本資訊。如果您仔細觀察，我們引入的任務型別涉及更多的推理步驟。換句話說，如果我們將問題分解成步驟並向模型示範，可能會有所幫助。最近，[思維鏈 (CoT)提示](https://arxiv.org/abs/2201.11903)已經流行起來，以解決更複雜的算術、常識和符號推理任務。
 
 Overall, it seems that providing examples is useful for solving some tasks. When zero-shot prompting and few-shot prompting are not sufficient, it might mean that whatever was learned by the model isn't enough to do well at the task. From here it is recommended to start thinking about fine-tuning your models or experimenting with more advanced prompting techniques. Up next we talk about one of the popular prompting techniques called chain-of-thought prompting which has gained a lot of popularity.
 
-整體而言，提供範例對於解決某些任務是有用的。當zero-shot提示和少量提示不足時，這可能意味著模型所學習的內容不足以在任務上表現良好。因此建議開始考慮微調模型或嘗試更進階的提示技術。接下來，我們將談論一種名為「思維鏈提示」的流行提示技術。
+整體而言，提供範例對於解決某些任務是有用的。當zero-shot提示和少量樣本提示不足時，這可能意味著模型所學習的內容不足以在任務上表現良好。因此建議開始考慮微調模型或嘗試更進階的提示技術。接下來，我們將談論一種名為「思維鏈提示」的流行提示技術。
 

@@ -285,7 +285,7 @@ You can design effective prompts for various simple tasks by using commands to i
 
 Keep in mind that you also need to experiment a lot to see what works best. Try different instructions with different keywords, contexts, and data and see what works best for your particular use case and task. Usually, the more specific and relevant the context is to the task you are trying to perform, the better. We will touch on the importance of sampling and adding more context in the upcoming guides.
 
-請記住，您還需要進行大量實驗，以檢視哪種方法最有效。嘗試使用不同的指令、關鍵詞、上下文和資料，看看哪種方法最適合您的特定用例和任務。通常，上下文越具體和相關，對您要執行的任務越有幫助。在即將推出的指南中，我們將談到抽樣和新增更多上下文的重要性。
+請記住，您還需要進行大量實驗，以檢視哪種方法最有效。嘗試使用不同的指令、關鍵詞、上下文和資料，看看哪種方法最適合您的特定使用案例和任務。通常，上下文越具體和相關，對您要執行的任務越有幫助。在即將推出的指南中，我們將談到抽樣和新增更多上下文的重要性。
 
 Others recommend that instructions are placed at the beginning of the prompt. It's also recommended that some clear separator like "###" is used to separate the instruction and context.
 

@@ -4,7 +4,7 @@
 
 We have seen already how effective well-crafted prompts can be for various tasks using techniques like few-shot learning. As we think about building real-world applications on top of LLMs, it becomes crucial to think about the reliability of these language models. This guide focuses on demonstrating effective prompting techniques to improve the reliability of LLMs like GPT-3. Some topics of interest include generalizability, calibration, biases, social biases, and factuality to name a few.
 
-我們已經看到了，使用少量樣本學習等技術，精心製作的提示對於各種任務的效果有多麼有效。當我們考慮在LLMs之上建構現實世界的應用時，思考這些語言模型的可靠性變得至關重要。本指南重點介紹了有效的提示技巧，以提高像GPT-3這樣的LLMs的可靠性。一些感興趣的主題包括通用性、校準、偏見、社會偏見和事實性等。
+我們已經看到了，使用少量樣本(few-shot)學習等技術，精心製作的提示對於各種任務的效果有多麼有效。當我們考慮在LLMs之上建構現實世界的應用時，思考這些語言模型的可靠性變得至關重要。本指南重點介紹了有效的提示技巧，以提高像GPT-3這樣的LLMs的可靠性。一些感興趣的主題包括通用性、校準、偏見、社會偏見和事實性等。
 
 **Note that this section is under heavy development.**
 

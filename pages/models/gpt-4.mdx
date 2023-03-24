@@ -65,7 +65,7 @@ GPT-4 APIs 目前僅支援文字輸入，但未來將會有圖像輸入功能。
 
 While the image input capability is still not publicly available, GPT-4 can be augmented with techniques like few-shot and chain-of-thought prompting to improve performance on these image related tasks.
 
-雖然影象輸入功能仍未公開，但可以使用少量樣本和思維鏈提示等技術來增強 GPT-4 在這些與圖像相關的任務上的表現。
+雖然影象輸入功能仍未公開，但可以使用少量樣本(few-shot)和思維鏈提示等技術來增強 GPT-4 在這些與圖像相關的任務上的表現。
 
 From the blog, we can see a good example where the model accepts visual inputs and a text instruction.
 
@@ -118,7 +118,7 @@ This is an impressive result as the model follows the correct instruction even w
 
 One area for experimentation is the ability to steer the model to provide answers in a certain tone and style via the `system` messages. This can accelerate personalization and getting accurate and more precise results for specific use cases.
 
-一個實驗的領域是透過“系統”訊息來引導模型以特定的語調和風格提供答案。這可以加速個性化並為特定用例獲得更準確和精確的結果。
+一個實驗的領域是透過“系統”訊息來引導模型以特定的語調和風格提供答案。這可以加速個性化並為特定使用案例獲得更準確和精確的結果。
 
 For example, let's say we want to build an AI assistant that generate data for us to experiment with. We can use the `system` messages to steer the model to generate data in a certain style.
 
@@ -208,7 +208,7 @@ Checkout this failure example below:
 
 The answer should be `Elvis Presley`. This highlights how brittle these models can be for some use cases. It will be interesting to combine GPT-4 with other external knowledge sources to improve the accuracy of cases like this or even improve results by using some of the prompt engineering techniques we have learned here like in-context learning or chain-of-thought prompting.
 
-答案應該是 `Elvis Presley`。這突顯了這些模型在某些用例中可能是多麼脆弱。將GPT-4與其他外部知識源相結合以提高像這樣的用例的準確性，甚至使用我們在這裡學到的一些提示工程技術，如上下文學習或思維鏈提示，可以改善結果，這將是有趣的。
+答案應該是 `Elvis Presley`。這突顯了這些模型在某些使用案例中可能是多麼脆弱。將GPT-4與其他外部知識源相結合以提高像這樣的使用案例的準確性，甚至使用我們在這裡學到的一些提示工程技術，如上下文學習或思維鏈提示，可以改善結果，這將是有趣的。
 
 Let's give it a shot. We have added additional instructions in the prompt and added "Think step-by-step". This is the result:
 
