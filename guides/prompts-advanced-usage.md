@@ -51,7 +51,7 @@ Topics:
 
 LLMs today trained on large amounts of data and tuned to follow instructions, are capable of performing tasks zero-shot. We tried a few zero-shot examples in the previous section. Here is one of the examples we used:
 
-今天的LLMs在大量的資料訓練和調整後，能夠執行zero-shot任務。我們在前一節中嘗試了一些zero-shot示範。這是我們使用的其中一個示範：
+今天的LLMs在大量的資料訓練和調整後，能夠執行**零樣本提示**(zero-shot)任務。我們在前一節中嘗試了一些零樣本提示範例。這是我們使用的其中一個例子：
 
 *Prompt:*
 
@@ -84,7 +84,7 @@ Note that in the prompt above we didn't provide the model with any examples -- t
 
 While large-language models already demonstrate remarkable zero-shot capabilities, they still fall short on more complex tasks when using the zero-shot setting. To improve on this, few-shot prompting is used as a technique to enable in-context learning where we provide demonstrations in the prompt to steer the model to better performance. The demonstrations serve as conditioning for subsequent examples where we would like the model to generate a response.
 
-雖然大型語言模型已經展現出了非凡的zero-shot能力，但在使用zero-shot設定時，它們仍然在更複雜的任務上表現不佳。為了改善這一點，採用了少量樣本提示的技術，以實現上下文學習，在提示中提供示範以引導模型實現更好的效能。這些示範作為後續示範的條件，我們希望模型能夠產生回應。
+雖然大型語言模型已經展現出了非凡的零樣本提示能力，但在使用零樣本提示設定時，它們仍然在更複雜的任務上表現不佳。為了改善這一點，採用了少量樣本提示的技術，以實現上下文學習，在提示中提供示範以引導模型實現更好的效能。這些示範作為後續示範的條件，我們希望模型能夠產生回應。
 
 Let's demonstrate few-shot prompting via an example that was presented by [Brown et al. 2020](https://arxiv.org/abs/2005.14165). In the example, the task is to correctly use a new word in a sentence.
 
@@ -245,7 +245,7 @@ That didn't work. It seems like few-shot prompting is not enough to get reliable
 
 Overall, it seems that providing examples is useful for solving some tasks. When zero-shot prompting and few-shot prompting are not sufficient, it might mean that whatever was learned by the model isn't enough to do well at the task. From here it is recommended to start thinking about fine-tuning your models or experimenting with more advanced prompting techniques. Up next we talk about one of the popular prompting techniques called chain-of-thought prompting which has gained a lot of popularity.
 
-總的來說，提供示範對於解決某些任務是有用的。當zero-shot提示和少量樣本提示不足時，這可能意味著模型學到的內容不足以在任務上表現良好。從這裡開始，建議開始考慮微調模型或嘗試更進階的提示技術。接下來，我們將討論一種流行的提示技術，稱為思維鏈提示，它已經獲得了很多的關注。
+總的來說，提供示範對於解決某些任務是有用的。當零樣本提示和少量樣本提示不足時，這可能意味著模型學到的內容不足以在任務上表現良好。從這裡開始，建議開始考慮微調模型或嘗試更進階的提示技術。接下來，我們將討論一種流行的提示技術，稱為思維鏈提示，它已經獲得了很多的關注。
 
 ---
 
